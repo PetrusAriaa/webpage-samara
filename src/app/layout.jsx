@@ -2,9 +2,10 @@ import localFont from "next/font/local"
 import { Plus_Jakarta_Sans } from "next/font/google"
 
 import Providers from "./Providers";
-import Footer from "@/components/Footer";
+// import Footer from "@/components/Footer";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
+// import Navbar from "@/components/Navbar";
+import dynamic from "next/dynamic";
 
 export const trajan = localFont({
   src: [
@@ -32,6 +33,14 @@ export const metadata = {
   title: "St. Matias Rasul - Paroki Kosambi Baru",
   description: "Situs Web Resmi Gereja Santo Matias Rasul Kosambi Baru",
 };
+
+const Navbar = dynamic(() => import("@/components/Navbar"), {
+  ssr: false,
+})
+
+const Footer = dynamic(() => import("@/components/Footer"), {
+  ssr: false,
+})
 
 export default function RootLayout({ children }) {
   return (
