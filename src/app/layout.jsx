@@ -2,10 +2,9 @@ import localFont from "next/font/local"
 import { Plus_Jakarta_Sans } from "next/font/google"
 
 import Providers from "./Providers";
-// import Footer from "@/components/Footer";
 import "./globals.css";
-// import Navbar from "@/components/Navbar";
 import dynamic from "next/dynamic";
+import InfoModal from "@/components/InfoModal";
 
 export const trajan = localFont({
   src: [
@@ -58,6 +57,7 @@ export default function RootLayout({ children }) {
               <Footer />
             </div>
           </div>
+          <InfoModal />
         </Providers>
       </body>
     </html>
