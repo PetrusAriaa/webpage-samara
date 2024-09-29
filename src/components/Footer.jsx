@@ -1,3 +1,7 @@
+import Link from "next/link"
+import { FaInstagram, FaPhoneAlt, FaWhatsapp, FaYoutube } from "react-icons/fa"
+import { FiMail } from "react-icons/fi"
+
 const Footer = () => {
   return (
     <>
@@ -9,18 +13,33 @@ const Footer = () => {
               <h2 className="text-xl mb-2">Gereja Santo Matias Rasul</h2>
               <p>Taman Kosambi Barat blok A ext 1 no.120 Perumahan Kosambi Baru, Jakarta Barat 11750</p>
             </div>
-            <div>
-              <div className="text-white">
+            <div className="flex flex-col gap-2">
+              <div className="text-white flex items-center gap-2">
+                <FaPhoneAlt />
                 <p>Telp. (021) 5411509</p>
               </div>
-              <div className="text-white">
+              <div className="text-white flex items-center gap-2">
+                <FaPhoneAlt />
                 <p>Fax (021) 54393323</p>
               </div>
-              <div className="text-white">
+              <Link href="mailto:sekretariat@parokikosambibaru.or.id" className="text-white flex items-center gap-2">
+                <FiMail className="text-lg"/>
                 <p>sekretariat@parokikosambibaru.or.id</p>
-              </div>
-              <div className="text-white">
+              </Link>
+              <Link href="https://wa.me/6281806999631" className="text-white flex items-center gap-2">
+                <FaWhatsapp className="text-lg"/>
                 <p>0818 0699 9631 (Whatsapp)</p>
+              </Link>
+              <div className="mt-4">
+                <p className="font-semibold text-white mb-2">Media Sosial:</p>
+                <div className="flex items-center gap-2">
+                  <Link href="http://instagram.com/paroki.kosambibaru" target="_blank" className="p-2 rounded-full bg-white text-blue-primary hover:bg-blue-secondary hover:text-white transition-colors">
+                    <FaInstagram className="text-lg" />
+                  </Link>
+                  <Link href="https://www.youtube.com/@GerejaSantoMatiasRasul" target="_blank" className="p-2 rounded-full bg-white text-blue-primary hover:bg-blue-secondary hover:text-white transition-colors">
+                    <FaYoutube className="text-xl" />
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
