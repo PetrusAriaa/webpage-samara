@@ -22,11 +22,11 @@ const Footer = () => {
                 <FaPhoneAlt />
                 <p>Fax (021) 54393323</p>
               </div>
-              <Link href="mailto:sekretariat@parokikosambibaru.or.id" className="text-white flex items-center gap-2">
+              <Link href="mailto:sekretariat@parokikosambibaru.or.id" target="_blank" className="text-white hover:text-blue-secondary transition-colors flex items-center gap-2">
                 <FiMail className="text-lg"/>
                 <p>sekretariat@parokikosambibaru.or.id</p>
               </Link>
-              <Link href="https://wa.me/6281806999631" className="text-white flex items-center gap-2">
+              <Link href="https://wa.me/6281806999631" target="_blank" className="text-white hover:text-blue-secondary transition-colors flex items-center gap-2">
                 <FaWhatsapp className="text-lg"/>
                 <p>0818 0699 9631 (Whatsapp)</p>
               </Link>
@@ -48,9 +48,10 @@ const Footer = () => {
               <h2 className="text-lg font-semibold text-white">Komsos Paroki</h2>
             </div>
             <div>
-              <div className="text-white">
+              <Link href="mailto:komsos@parokikosambibaru.or.id" target="_blank" className="text-white hover:text-blue-secondary transition-colors flex items-center gap-2">
+                <FiMail className="text-lg"/>
                 <p>komsos@parokikosambibaru.or.id</p>
-              </div>
+              </Link>
             </div>
           </div>
           <div>
