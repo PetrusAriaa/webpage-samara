@@ -11,8 +11,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        serif: ['var(--font-trajan)'],
-        sans: ['var(--font-jakarta)'],
+        heading: ['var(--font-jakarta)'],
+        content: ['var(--font-trajan)'],
       },
       colors: {
         "blue-primary": "#1A3783",
