@@ -38,7 +38,7 @@ const Navbar = () => {
       isBordered
       isBlurred={false}
       classNames={{
-        base: (scrollPos > scrollTreshold ? "lg:py-0 " : "lg:py-4 ") + "bg-white py-0 border-b border-slate-200/50 transition-all shadow-lg drop-shadow-sm",
+        base: (scrollPos > scrollTreshold ? "lg:py-0 " : "lg:py-4 ") + " bg-white fixed py-0 border-b border-slate-200/50 transition-all shadow-lg drop-shadow-sm",
         wrapper: "max-w-[1300px]",
       }}
     >

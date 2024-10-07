@@ -5,6 +5,7 @@ import Providers from "./Providers";
 import "./globals.css";
 import dynamic from "next/dynamic";
 import InfoModal from "@/components/InfoModal";
+import Footer from "@/components/Footer";
 
 // export const trajan = localFont({
 //   src: [
@@ -43,10 +44,6 @@ const Navbar = dynamic(() => import("@/components/Navbar"), {
   ssr: false,
 })
 
-const Footer = dynamic(() => import("@/components/Footer"), {
-  ssr: false,
-})
-
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
@@ -59,9 +56,7 @@ export default function RootLayout({ children }) {
               <Navbar />
               {children}
             </div>
-            <div className="w-full place-items-end">
-              <Footer />
-            </div>
+            <Footer />
           </div>
           <InfoModal />
         </Providers>

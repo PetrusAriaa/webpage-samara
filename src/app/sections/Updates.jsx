@@ -29,13 +29,13 @@ const UpdatesSection = () => {
       </div>
       <div className="w-full bg-dark-primary flex justify-between">
         <div className="text-white p-8 w-3/5">
-          <p className="font-serif text-xl text-blue-secondary mb-4">Kabar Terbaru</p>
-          <h1 className="text-5xl font-bold line-clamp-2 mb-4">Zaitun Edisi Natal 2024</h1>
+          <p className="font-heading text text-blue-secondary mb-4 font-bold tracking-[10px]">BERITA PAROKI</p>
+          <h1 className="font-heading text-5xl font-bold line-clamp-2 mb-4">Zaitun Edisi Natal 2024</h1>
           <p className="line-clamp-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam vitae qui natus adipisci, temporibus quam molestias fugit, dolorum tempora cumque enim id possimus in facilis saepe molestiae error rerum eum.</p>
           <Button as={Link} href="/zaitun" variant="ghost" radius="sm" className="text-white mt-8 data-[hover=true]:border-blue-secondary data-[hover=true]:!bg-blue-secondary">Kunjungi</Button>
         </div>
         <div className="overflow-hidden w-full">
-          <div className="relative h-[50vh] max-h-[720px] w-full hover:scale-110 transition-transform bg-blue-primary/50">
+          <div className="relative h-96 w-full hover:scale-110 transition-transform bg-blue-primary/50">
             <Image
               src="/assets/zaitun-preview.webp"
               alt=""
