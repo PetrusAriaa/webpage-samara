@@ -98,8 +98,8 @@ const JadwalMisaSection = () => {
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1179.300278499702!2d106.71375096532124!3d-6.173913110648456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f82f762d21e1%3A0x6fa55f3e9b6796e9!2sGereja%20Katolik%20Paroki%20Santo%20Matias%20Rasul%2C%20Kosambi%20Baru!5e0!3m2!1sid!2sid!4v1728317186635!5m2!1sid!2sid" className="h-96 aspect-[5/4]" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
             </iframe>
           </div>
-          <div className="px-4 flex flex-col justify-end">
-            <h3 className="font-heading text-xl text-blue-secondary mb-4">Ketentuan Mengikuti Perayaan Ekaristi</h3>
+          <div className="px-4 flex flex-col justify-end gap-4">
+            <h3 className="font-heading text-xl text-blue-secondary">Ketentuan Mengikuti Perayaan Ekaristi</h3>
             <ul className="list-disc ml-4">
               <li>Umat tidak perlu melakukan pendaftaran untuk mengikuti Misa Harian, Misa Jumat Pertama, dan Misa Mingguan.</li>
               <li>Menjaga protokol kesehatan yang berlaku.</li>
@@ -107,7 +107,7 @@ const JadwalMisaSection = () => {
               <li>Mengenakan pakaian rapi dan sopan.</li>
               <li>Datang tepat waktu.</li>
             </ul>
-            <p className="bg-rose-500 w-fit px-4 py-2 rounded-lg text-white my-4 animate-pulse">Misa daring sudah ditiadakan</p>
+            <p className="bg-rose-500 w-fit px-4 py-2 rounded-lg text-white animate-pulse mb-4">Misa daring sudah ditiadakan</p>
           </div>
         </div>
       </div>
