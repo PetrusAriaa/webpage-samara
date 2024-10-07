@@ -4,7 +4,7 @@ import { FiMail } from "react-icons/fi"
 
 const Footer = () => {
   return (
-    <>
+    <div>
       <div className="flex justify-center bg-blue-primary py-16">
         <div className="w-[95%] max-w-[1300px] grid grid-cols-3 gap-8">
           <div>
@@ -64,7 +64,7 @@ const Footer = () => {
           <p className="text-center text-white/50 text-sm">© Paroki Kosambi Baru - Gereja Santo Matias Rasul - 2024</p>
         </div>
       </div>
-    </>
+    </div>
   )
 }
 
