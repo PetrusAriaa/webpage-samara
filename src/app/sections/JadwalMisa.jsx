@@ -3,12 +3,12 @@ import { Button } from "@nextui-org/button"
 const JadwalMisaSection = () => {
   return (
     <div className="w-full flex justify-center py-16">
-      <div className="w-[95%] max-w-[1300px]">
+      <div className="w-[80%] max-w-[1300px]">
         <div className="flex flex-col items-center mb-16">
           <h1 className="font-heading text-[2rem] text-center min-w-max text-blue-primary"><b>Jadwal</b> Misa</h1>
           <div className="w-8 h-1.5 bg-blue-primary" />
         </div>
-        <div className="grid grid-cols-3 mb-20">
+        <div className="grid grid-cols-3 mb-10">
           <div className="flex flex-col gap-8 px-4">
             <div className="flex flex-col items-center justify-center gap-2">
               <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -92,22 +92,25 @@ const JadwalMisaSection = () => {
             </div>
           </div>
         </div>
-        <div className="flex">
-          <div className="flex flex-col items-end gap-4 px-4">
-            <Button className="bg-blue-secondary text-white" size="lg" radius="sm">Lihat Lokasi Gereja</Button>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1179.300278499702!2d106.71375096532124!3d-6.173913110648456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f82f762d21e1%3A0x6fa55f3e9b6796e9!2sGereja%20Katolik%20Paroki%20Santo%20Matias%20Rasul%2C%20Kosambi%20Baru!5e0!3m2!1sid!2sid!4v1728317186635!5m2!1sid!2sid" className="h-96 aspect-[5/4]" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        <div className="bg-white p-8 pt-10 rounded-lg drop-shadow-md shadow-lg overflow-hidden">
+          <div className="bg-blue-primary h-2 w-full fixed top-0 left-0" />
+          <div className="flex">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1179.300278499702!2d106.71375096532124!3d-6.173913110648456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f82f762d21e1%3A0x6fa55f3e9b6796e9!2sGereja%20Katolik%20Paroki%20Santo%20Matias%20Rasul%2C%20Kosambi%20Baru!5e0!3m2!1sid!2sid!4v1728317186635!5m2!1sid!2sid"
+              className="h-96 aspect-[5/4] rounded-xl drop-shadow-lg"
+              loading="lazy" 
+              referrerPolicy="no-referrer-when-downgrade">
             </iframe>
-          </div>
-          <div className="px-4 flex flex-col justify-end gap-4">
-            <h3 className="font-heading text-xl text-blue-secondary">Ketentuan Mengikuti Perayaan Ekaristi</h3>
-            <ul className="list-disc ml-4">
-              <li>Umat tidak perlu melakukan pendaftaran untuk mengikuti Misa Harian, Misa Jumat Pertama, dan Misa Mingguan.</li>
-              <li>Menjaga protokol kesehatan yang berlaku.</li>
-              <li>Penggunaan masker tidak diwajibkan kecuali bagi umat yang sedang dalam kondisi sakit demi keselamatan bersama.</li>
-              <li>Mengenakan pakaian rapi dan sopan.</li>
-              <li>Datang tepat waktu.</li>
-            </ul>
-            <p className="bg-rose-500 w-fit px-4 py-2 rounded-lg text-white animate-pulse mb-4">Misa daring sudah ditiadakan</p>
+            <div className="px-6 flex flex-col gap-4">
+              <h3 className="font-heading text-xl text-blue-secondary">Ketentuan Mengikuti Perayaan Ekaristi</h3>
+              <ul className="list-disc ml-4">
+                <li>Umat tidak perlu melakukan pendaftaran untuk mengikuti Misa Harian, Misa Jumat Pertama, dan Misa Mingguan.</li>
+                <li>Menjaga protokol kesehatan yang berlaku.</li>
+                <li>Penggunaan masker tidak diwajibkan kecuali bagi umat yang sedang dalam kondisi sakit demi keselamatan bersama.</li>
+                <li>Mengenakan pakaian rapi dan sopan.</li>
+                <li>Datang tepat waktu.</li>
+              </ul>
+              <p className="bg-rose-500 w-fit px-4 py-2 rounded-lg text-white animate-pulse mb-4">Misa daring sudah ditiadakan</p>
+            </div>
           </div>
         </div>
       </div>

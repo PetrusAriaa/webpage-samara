@@ -54,9 +54,9 @@ const Footer = () => {
               </Link>
             </div>
           </div>
-          <div>
+          {/* <div>
             <div className="size-96 bg-slate-200 animate-pulse rounded" />
-          </div>
+          </div> */}
         </div>
       </div>
       <div className="flex w-full justify-center bg-blue-950 py-2">
