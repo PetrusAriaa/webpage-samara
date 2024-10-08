@@ -1,9 +1,14 @@
+"use client"
+
 import Link from "next/link"
 import { FaInstagram, FaPhoneAlt, FaWhatsapp, FaYoutube } from "react-icons/fa"
 import { FiMail } from "react-icons/fi"
+import { usePathname } from "next/navigation";
 
 const Footer = () => {
-  return (
+  const path = usePathname()
+
+  return path.split("/").indexOf("zaitun") > -1 ? null : (
     <div>
       <div className="flex justify-center bg-blue-primary py-16">
         <div className="w-[95%] max-w-[1300px] grid grid-cols-3 gap-8">
