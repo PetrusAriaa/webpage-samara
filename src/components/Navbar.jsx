@@ -31,7 +31,7 @@ const Navbar = () => {
   const scrollTreshold = shouldRenderNav ? 200 : 50
 
 
-  return (
+  return path.split("/").indexOf("zaitun") > -1 ? null : (
     <NextUINavbar
       onMenuOpenChange={setIsMenuOpen}
       isMenuOpen={isMenuOpen}
@@ -39,7 +39,7 @@ const Navbar = () => {
       isBlurred={false}
       classNames={{
         base: (scrollPos > scrollTreshold ? "lg:py-0 " : "lg:py-4 ") + " bg-white fixed py-0 border-b border-slate-200/50 transition-all shadow-lg drop-shadow-sm",
-        wrapper: "max-w-[1300px]",
+        wrapper: "w-[90%] max-w-[1300px]",
       }}
     >
       <NavbarContent justify="start">
@@ -83,10 +83,22 @@ const Navbar = () => {
         </NavbarItem>
         <NavbarItem>
           <Link
-            href="#"
+            href="/zaitun"
+            target="_blank"
             className={
               // (scrollPos > scrollTreshold ? "lg:text-neutral-dark " : "lg:text-white ") +
               "transition-colors text-neutral-dark hover:bg-enova-sky-500/25 hover:!text-enova-sky-500 rounded-md px-3 py-1"
+            }
+          >
+            Zaitun
+          </Link>
+        </NavbarItem>
+        <NavbarItem>
+          <Link
+            href="#"
+            className={
+              // (scrollPos > scrollTreshold ? "lg:text-neutral-dark " : "lg:text-white ") +
+              "transition-colors text-neutral-400 cursor-not-allowed hover:bg-enova-sky-500/25 hover:!text-enova-sky-500 rounded-md px-3 py-1"
             }
           >
             Jadwal
@@ -97,7 +109,7 @@ const Navbar = () => {
             href="#"
             className={
               // (scrollPos > scrollTreshold ? "lg:text-neutral-dark " : "lg:text-white ") +
-              "transition-colors text-neutral-dark hover:bg-enova-sky-500/25 hover:!text-enova-sky-500 rounded-md px-3 py-1"
+              "transition-colors text-neutral-400 cursor-not-allowed hover:bg-enova-sky-500/25 hover:!text-enova-sky-500 rounded-md px-3 py-1"
             }
           >
             Berita
@@ -108,7 +120,7 @@ const Navbar = () => {
             href="#"
             className={
               // (scrollPos > scrollTreshold ? "lg:text-neutral-dark " : "lg:text-white ") +
-              "transition-colors text-neutral-dark hover:bg-enova-sky-500/25 hover:!text-enova-sky-500 rounded-md px-3 py-1"
+              "transition-colors text-neutral-400 cursor-not-allowed hover:bg-enova-sky-500/25 hover:!text-enova-sky-500 rounded-md px-3 py-1"
             }
           >
             Galeri
