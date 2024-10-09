@@ -23,7 +23,7 @@ const ArticlePage = ({params}) => {
     <div className="min-h-screen">
       <div className="flex">
         <div className="h-screen w-[55%] fixed flex">
-          <div className="w-64 h-full bg-rose-950 p-2">
+          <div className="w-[16%] min-w-[180px] flex-shrink-0 h-full bg-rose-950 p-2">
             <p className="text-center italic text-white/50">Advertisements</p>
             <div className="relative w-full aspect-[4/5] bg-slate-200 rounded flex overflow-hidden mb-2">
               {/* <p className="text-3xl text-slate-500">A1</p> */}
