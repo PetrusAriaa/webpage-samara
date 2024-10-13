@@ -8,7 +8,7 @@ const Header = () => {
           <Image
             src="/assets/VISI-DAN-MISI_02.png"
             alt="hero"
-            className="object-cover" 
+            className="object-cover"
             priority
             fill />
         </div>
@@ -26,13 +26,13 @@ const Header = () => {
 }
 
 const Visi = () => {
-  return(
+  return (
     <div className="flex flex-row-reverse">
       <div className="relative w-1/2 aspect-square max-h-[1300px] flex-shrink-0">
         <Image
           src="/assets/VISI-DAN-MISI_05.png"
           alt="hero"
-          className="object-cover brightness-75" 
+          className="object-cover brightness-75"
           priority
           fill />
       </div>
@@ -45,13 +45,13 @@ const Visi = () => {
 }
 
 const Misi = () => {
-  return(
+  return (
     <div className="flex">
       <div className="relative w-1/2 aspect-square max-h-[1300px] flex-shrink-0">
         <Image
           src="/assets/VISI-DAN-MISI_13.png"
           alt="hero"
-          className="object-cover brightness-75" 
+          className="object-cover brightness-75"
           priority
           fill />
       </div>
@@ -74,12 +74,26 @@ const Misi = () => {
   )
 }
 
+const Map = () => {
+  return (
+    <div className="m-0 p-0">
+      <div className="flex flex-col items-center justify-center gap-4 my-16">
+        <h2 className="text-6xl font-bold font-heading text-blue-primary ">Peta Wilayah Paroki Kosambi Baru</h2>
+        <div className="w-8 h-1.5 bg-blue-primary" />
+      </div>
+      <iframe src="https://www.google.com/maps/d/embed?mid=1hB2Spsg2Jozjy0NUO19lz7-Kr4ICcAg&ehbc=2E312F&scrollwheel=false" height="500"
+        loading="lazy" referrerpolicy="no-referrer-when-downgrade" pointer-events="none" style={{ width: "100%" }}></iframe>
+    </div>
+  )
+}
+
 const VisiMisiPage = () => {
   return (
     <>
       <Header />
       <Visi />
       <Misi />
+      <Map />
     </>
   )
 }
