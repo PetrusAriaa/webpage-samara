@@ -82,7 +82,7 @@ const Map = () => {
         <div className="w-8 h-1.5 bg-blue-primary" />
       </div>
       <iframe src="https://www.google.com/maps/d/embed?mid=1hB2Spsg2Jozjy0NUO19lz7-Kr4ICcAg&ehbc=2E312F&scrollwheel=false" height="500"
-        loading="lazy" referrerpolicy="no-referrer-when-downgrade" pointer-events="none" style={{ width: "100%" }}></iframe>
+        loading="lazy" referrerPolicy="no-referrer-when-downgrade" pointerEvents="none" style={{ width: "100%" }}></iframe>
     </div>
   )
 }
