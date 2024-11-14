@@ -14,9 +14,9 @@ const Header = () => {
         </div>
       </div>
       <div className="bg-blue-950/50 w-full h-[50vh] max-h-[720px] absolute flex justify-center">
-        <div className="w-[90%] max-w-[1300px] text-white h-full flex flex-col items-center justify-end">
-          <div className="flex flex-col items-center gap-4 mb-16">
-            <h1 className="font-heading text-6xl text-center min-w-max "><b>Visi</b> dan Misi</h1>
+        <div className="w-[90%] max-w-[1300px] text-white h-full flex flex-col items-center justify-center">
+          <div className="flex flex-col items-center gap-4 mt-20  ">
+            <h1 className="font-heading text-4xl sm:text-3xl md:text-4xl lg:text-5xl text-center min-w-max "><b>Visi</b> dan Misi</h1>
             <div className="w-8 h-1.5 bg-white" />
           </div>
         </div>
@@ -36,9 +36,11 @@ const Visi = () => {
           priority
           fill />
       </div>
-      <div className="flex gap-16 flex-col justify-center items-end max-w-[650px] px-6">
-        <h2 className="text-6xl font-bold font-heading text-blue-primary text-right">Visi</h2>
-        <p className="text-2xl text-right">Meningkatkan kualitas hidup umat beriman dalam keluarga dan masyarakat dengan karya nyata, inovatif, dan dalam terang Roh Kudus sehingga kehadiran Allah dapat lebih dirasakan berdasarkan semangat Gembala Baik dan murah hati.</p>
+      {/* <div className="flex gap-16 flex-col justify-center items-end max-w-[650px] px-6"> */}
+      <div className="bg-white px-2 lg:px-6 flex gap-7 lg:gap-16 flex-col justify-center max-w-[650px] py-7 lg:py-20">
+        <h2 className="text-4xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-heading text-blue-primary text-right">Visi</h2>
+        <p className="text-xs lg:text-2xl text-right">Meningkatkan kualitas hidup umat beriman dalam keluarga dan masyarakat dengan karya nyata, inovatif, dan dalam terang Roh Kudus sehingga kehadiran Allah dapat lebih dirasakan berdasarkan semangat Gembala Baik dan murah hati.</p>
+        {/* text-2xl sm:text-1xl md:text-2xl lg:text-5xl */}
       </div>
     </div>
   )
@@ -55,9 +57,9 @@ const Misi = () => {
           priority
           fill />
       </div>
-      <div className="bg-white px-6 flex gap-16 flex-col justify-center max-w-[650px] py-20">
-        <h2 className="text-6xl font-bold font-heading text-blue-primary">Misi</h2>
-        <ol className="pl-6 text-lg list-decimal list-outside flex flex-col gap-4 text-justify">
+      <div className="bg-white px-6 flex gap-7 lg:gap-16 flex-col justify-center max-w-[650px] py-7 lg:py-20">
+        <h2 className="text-4xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-heading text-blue-primary">Misi</h2>
+        <ol className="lg:pl-6 text-xs lg:text-lg  list-decimal list-outside flex flex-col gap-2 lg:gap-4 text-justify">
           <li>Meningkatkan serta memperdalam iman akan Yesus Kristus di dalam komunitas basis, lingkungan, keluarga, dan kaum muda sehingga dapat menjadi Saksi Kristus dimanapun berada</li>
           <li>Membangun komunitas basis yang kooperatif, solider (kepedulian terhadap sesama) dan misioner</li>
           <li>Mendorong umat untuk menjadi saksi dan pewartaan iman sebagai tugas perutusan</li>
@@ -93,7 +95,7 @@ const VisiMisiPage = () => {
       <Header />
       <Visi />
       <Misi />
-      <Map />
+      {/* <Map /> */}
     </>
   )
 }
