@@ -46,7 +46,7 @@ const Navbar = () => {
         <NavbarMenuToggle
           icon={isMenuOpen ? <BsXLg size={30} /> : <BsList size={30} />}
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-          className="w-fit aspect-square flex lg:hidden hover:bg-slate-200/50 text-teal-secondary h-min p-2" />
+          className="w-fit aspect-square flex lg:hidden hover:bg-blue-secondary/10 text-blue-secondary h-min p-2" />
         <NavbarBrand className="hidden sm:block w-fit ">
             <Link href="/">
               <div className={
@@ -64,7 +64,7 @@ const Navbar = () => {
             href="/"
             className={
               // (scrollPos > scrollTreshold ? "lg:text-neutral-dark " : "lg:text-white ") +
-              "transition-colors text-neutral-dark hover:bg-enova-sky-500/25 hover:!text-enova-sky-500 rounded-md px-3 py-1"
+              "transition-colors text-neutral-dark hover:bg-blue-secondary/25 hover:!text-blue-secondary rounded-md px-3 py-1"
             }
           >
             Beranda
@@ -75,7 +75,7 @@ const Navbar = () => {
             href="#"
             className={
               // (scrollPos > scrollTreshold ? "lg:text-neutral-dark " : "lg:text-white ") +
-              "transition-colors text-neutral-dark hover:bg-enova-sky-500/25 hover:!text-enova-sky-500 rounded-md px-3 py-1"
+              "transition-colors text-neutral-dark hover:bg-blue-secondary/25 hover:!text-blue-secondary rounded-md px-3 py-1"
             }
           >
             Profil
@@ -87,7 +87,7 @@ const Navbar = () => {
             target="_blank"
             className={
               // (scrollPos > scrollTreshold ? "lg:text-neutral-dark " : "lg:text-white ") +
-              "transition-colors text-neutral-dark hover:bg-enova-sky-500/25 hover:!text-enova-sky-500 rounded-md px-3 py-1"
+              "transition-colors text-neutral-dark hover:bg-blue-secondary/25 hover:!text-blue-secondary rounded-md px-3 py-1"
             }
           >
             Zaitun
@@ -98,7 +98,7 @@ const Navbar = () => {
             href="#"
             className={
               // (scrollPos > scrollTreshold ? "lg:text-neutral-dark " : "lg:text-white ") +
-              "transition-colors text-neutral-400 cursor-not-allowed hover:bg-enova-sky-500/25 hover:!text-enova-sky-500 rounded-md px-3 py-1"
+              "transition-colors text-neutral-400 cursor-not-allowed hover:bg-blue-secondary/25 hover:!text-blue-secondary rounded-md px-3 py-1"
             }
           >
             Jadwal
@@ -109,7 +109,7 @@ const Navbar = () => {
             href="#"
             className={
               // (scrollPos > scrollTreshold ? "lg:text-neutral-dark " : "lg:text-white ") +
-              "transition-colors text-neutral-400 cursor-not-allowed hover:bg-enova-sky-500/25 hover:!text-enova-sky-500 rounded-md px-3 py-1"
+              "transition-colors text-neutral-400 cursor-not-allowed hover:bg-blue-secondary/25 hover:!text-blue-secondary rounded-md px-3 py-1"
             }
           >
             Berita
@@ -120,7 +120,7 @@ const Navbar = () => {
             href="#"
             className={
               // (scrollPos > scrollTreshold ? "lg:text-neutral-dark " : "lg:text-white ") +
-              "transition-colors text-neutral-400 cursor-not-allowed hover:bg-enova-sky-500/25 hover:!text-enova-sky-500 rounded-md px-3 py-1"
+              "transition-colors text-neutral-400 cursor-not-allowed hover:bg-blue-secondary/25 hover:!text-blue-secondary rounded-md px-3 py-1"
             }
           >
             Galeri
