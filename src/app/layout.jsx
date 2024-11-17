@@ -4,7 +4,8 @@ import { Plus_Jakarta_Sans, Karla } from "next/font/google"
 import Providers from "./Providers";
 import "./globals.css";
 import dynamic from "next/dynamic";
-import InfoModal from "@/components/InfoModal";
+import InfoModal from "../components/InfoModal";
+
 import Footer from "@/components/Footer";
 
 // export const trajan = localFont({

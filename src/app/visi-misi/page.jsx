@@ -28,7 +28,7 @@ const Header = () => {
 const Visi = () => {
   return (
     <div className="flex flex-row-reverse">
-      <div className="relative w-1/2 aspect-square max-h-[1300px] flex-shrink-0">
+      <div className="relative w-1/2 aspect-square flex-shrink-0">
         <Image
           src="/assets/VISI-DAN-MISI_05.png"
           alt="hero"
@@ -37,9 +37,9 @@ const Visi = () => {
           fill />
       </div>
       {/* <div className="flex gap-16 flex-col justify-center items-end max-w-[650px] px-6"> */}
-      <div className="bg-white px-2 lg:px-6 flex gap-7 lg:gap-16 flex-col justify-center max-w-[650px] py-7 lg:py-20">
-        <h2 className="text-4xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-heading text-blue-primary text-right">Visi</h2>
-        <p className="text-xs md:text-1xl lg:text-2xl  text-right">Meningkatkan kualitas hidup umat beriman dalam keluarga dan masyarakat dengan karya nyata, inovatif, dan dalam terang Roh Kudus sehingga kehadiran Allah dapat lebih dirasakan berdasarkan semangat Gembala Baik dan murah hati.</p>
+      <div className="m-2 bg-white px-2 lg:px-9 flex gap-1 lg:gap-16 flex-col justify-center  py-2 lg:py-10">
+        <h2 className="text-2xl sm:text-4xl md:text-5xl my-4 lg:text-6xl font-bold font-heading text-blue-primary text-center">Visi</h2>
+        <p className="text-xs md:text-1xl lg:text-2xl  lg:text-center text-justify ">Meningkatkan kualitas hidup umat beriman dalam keluarga dan masyarakat dengan karya nyata, inovatif, dan dalam terang Roh Kudus sehingga kehadiran Allah dapat lebih dirasakan berdasarkan semangat Gembala Baik dan murah hati.</p>
         {/* text-2xl sm:text-1xl md:text-2xl lg:text-5xl */}
       </div>
     </div>
@@ -57,9 +57,9 @@ const Misi = () => {
           priority
           fill />
       </div>
-      <div className="bg-white px-6 flex gap-7 lg:gap-16 flex-col justify-center max-w-[650px] py-7 lg:py-20">
-        <h2 className="text-4xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-heading text-blue-primary">Misi</h2>
-        <ol className="lg:pl-6 text-xs lg:text-lg  list-decimal list-outside flex flex-col gap-2 lg:gap-4 text-justify">
+      <div className=" m-2 bg-white px-2 lg:px-9 flex flex-col justify-center  py-2 lg:py-1">
+        <h2 className="text-2xl sm:text-4xl md:text-5xl my-4 lg:my-14 lg:text-6xl font-bold font-heading text-blue-primary text-center">Misi</h2>
+        <ol className="lg:pl-6 pl-3 text-xs lg:text-lg  list-decimal list-outside flex flex-col gap-2 lg:gap-4 text-justify">
           <li>Meningkatkan serta memperdalam iman akan Yesus Kristus di dalam komunitas basis, lingkungan, keluarga, dan kaum muda sehingga dapat menjadi Saksi Kristus dimanapun berada</li>
           <li>Membangun komunitas basis yang kooperatif, solider (kepedulian terhadap sesama) dan misioner</li>
           <li>Mendorong umat untuk menjadi saksi dan pewartaan iman sebagai tugas perutusan</li>
