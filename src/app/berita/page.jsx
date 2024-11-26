@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image"
 
 export default function BeritaPage() {
-  const [berita, setberita] = useState(null); 
+  const [berita, setberita] = useState(null);
 
   useEffect(() => {
     const fetchberita = async () => {

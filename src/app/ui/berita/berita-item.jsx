@@ -2,7 +2,6 @@ import PropTypes from "prop-types";
 import { Card, CardBody, CardFooter } from "@nextui-org/react";
 import Link from "next/link";
 import Image from "next/image";
-import { Button } from "@nextui-org/button";
 
 export const BeritaItem = ({ item }) => {
   return (
