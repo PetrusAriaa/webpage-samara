@@ -1,6 +1,6 @@
 import Image from "next/image"
 
-const CardItem = ({img, nama, posisi, masaJabat}) => {
+const CardItem = ({ img, nama, posisi, masaJabat }) => {
   return (
     <div className="bg-white w-full min-h-[30rem] shadow-lg rounded-lg overflow-hidden">
       <div className="overflow-hidden">
@@ -22,7 +22,7 @@ const CardItem = ({img, nama, posisi, masaJabat}) => {
   )
 }
 
-const RomoChips = ({img, nama, masaJabat}) => {
+const RomoChips = ({ img, nama, masaJabat }) => {
   return (
     <div className="flex flex-col items-center">
       <div className="flex flex-col w-fit items-center">
@@ -46,25 +46,25 @@ const RomoChips = ({img, nama, masaJabat}) => {
 const Header = () => {
   return (
     <div className="w-full flex justify-center">
-      <div className="w-full h-[60vh] max-h-[720px] relative">
+      <div className="w-full h-[35vh] md:h-[40vh] lg:h-[50vh] max-h-[720px] relative">
         <div className="relative w-full h-full bg-blue-950">
           <Image
             src="/assets/sejarah-paroki_01.webp"
             alt="hero"
-            className="object-cover" 
+            className="object-cover"
             priority
             fill />
         </div>
-      </div>
-      <div className="bg-blue-950/65 w-full h-[60vh] max-h-[720px] absolute flex justify-center">
-        <div className="w-[90%] max-w-[1300px] text-white h-full flex flex-col items-center justify-end">
-          <div className="flex flex-col items-center gap-4 mb-16">
-            <h1 className="font-heading text-6xl text-center min-w-max "><b>Profil</b> Pastor Paroki</h1>
-            <div className="w-8 h-1.5 bg-white" />
+          </div>
+          <div className="bg-blue-950/65 w-full h-[35vh]  md:h-[40vh] lg:h-[50vh] max-h-[720px] absolute flex justify-center">
+            <div className="w-[90%] max-w-[1300px] text-white h-full flex flex-col items-center justify-center">
+              <div className="flex flex-col items-center gap-4 mt-20  ">
+                <h1 className="font-heading text-3xl md:text-4xl lg:text-5xl text-center min-w-max "><b>Berita</b> Paroki</h1>
+                <div className="w-8 h-1.5 bg-white" />
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
   )
 }
 
@@ -73,9 +73,9 @@ const ContentSection = () => {
     <div className="flex w-full min-h-screen justify-center bg-white">
       <div className="w-4/5 max-w-[1300px] py-20">
         <div className="flex gap-8">
-          <CardItem img="/assets/romo-yus.webp" nama="RD. Aloysius Yus Noron" posisi="Pastor Kepala" masaJabat="2022 - sekarang"/>
-          <CardItem img="/assets/romo-silvester.webp" nama="RD. Silvester Hari Pamungkas" posisi="Pastor Rekan" masaJabat="2023 - sekarang"/>
-          <CardItem img="/assets/romo-gunadi.webp" nama="RD. Gunadi Emmanuel" posisi="Pastor Residensi" masaJabat=""/>
+          <CardItem img="/assets/romo-yus.webp" nama="RD. Aloysius Yus Noron" posisi="Pastor Kepala" masaJabat="2022 - sekarang" />
+          <CardItem img="/assets/romo-silvester.webp" nama="RD. Silvester Hari Pamungkas" posisi="Pastor Rekan" masaJabat="2023 - sekarang" />
+          <CardItem img="/assets/romo-gunadi.webp" nama="RD. Gunadi Emmanuel" posisi="Pastor Residensi" masaJabat="" />
         </div>
         <div className="grid grid-cols-4 mt-10 gap-8">
           <RomoChips img="/assets/romo-jacobus.webp" nama="RD. Jacobus Tarigan" masaJabat="2005 - 2009" />
