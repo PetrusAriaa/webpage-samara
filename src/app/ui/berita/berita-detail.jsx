@@ -71,22 +71,23 @@ export const BeritaDetail = ({ berita }) => {
 
 
                 <div className="my-5">
-                    <h2 className="text-3xl font-bold mb-4">{berita?.title}</h2>
+                    <h2 className="text-4xl font-bold mb-4 text-blue-primary">{berita?.title}</h2>
 
                     <div className="flex justify-between items-center text-sm mb-8">
-                        <div className="text-xs font-bold bg-gray-200 mr-2 px-2.5 py-0.5 rounded">
-                            {berita.bidang}
+                        <div className="text-xs text-blue-secondary font-bold bg-blue-100 mr-2 px-2.5 py-0.5 rounded">
+                            BIDANG {berita.bidang}
                         </div>
-                        <b>{new Date(berita?.date).toLocaleDateString()}</b>
+                        <b className="text-blue-secondary">{new Date(berita?.date).toLocaleDateString()}</b>
 
                     </div>
+                    <p className=" mb-4" dangerouslySetInnerHTML={{
+                        __html: berita.isiBerita.replace(/\n/g, "<br />"),
+                    }}>
+                        {/* {berita?.isiBerita} */}
+                    </p>
                 </div>
-                
-                <p className=" mb-4" dangerouslySetInnerHTML={{
-                    __html: berita.isiBerita.replace(/\n/g, "<br />"),
-                }}>
-                    {/* {berita?.isiBerita} */}
-                </p>
+
+
             </article>
         </section>
     );

@@ -10,9 +10,9 @@ export const BeritaItem = ({ item }) => {
       <Card
         shadow="sm"
         key={item.id}
-        className="border rounded-md shadow-sm"
+        className="border rounded-md shadow-lg"
       >
-        <CardBody className="overflow-visible p-2 md:p-3 lg:p-4">
+        <CardBody className="overflow-visible ">
           <Link href={`/berita/${item.id}`} className="flex w-full">
             <Image
               className="rounded-t-xl md:h-56 rounded hover:scale-105 cursor-pointer transition-all duration-300"
@@ -24,18 +24,15 @@ export const BeritaItem = ({ item }) => {
             />
           </Link>
         </CardBody>
-        <CardFooter className="flex-col items-start text-left p-2 gap-2 md:p-3 md:gap-3 lg:p-4 lg:gap-4">
-          <p className="text-md md:text-lg lg:text-xl font-bold my-1">{item.title}</p>
-          <b className="text-xs lg:text-sm text-gray-700">{item.bidang}</b>
-          <p className="text-sm lg:text-md mb-4 ">{item?.isiBerita.substring(0, 85)}...</p>
-          <div className=" w-full">
-            <Link href={`/berita/${item.id}`} className="w-full">
-              <Button className="w-full py-2 text-center text-white bg-blue-secondary rounded-lg">
-                Selengkapnya
-              </Button>
-            </Link>
-          </div>
+        <CardFooter className="flex-col items-start text-left p-2 gap-2 md:p-3 md:gap-3 lg:p-3 lg:gap-1">
+
+          <b className="text-sm md:text-md lg:text-lg text-blue-secondary">{item.bidang}</b>
+          <Link href={`/berita/${item.id}`}><b className="text-md md:text-lg lg:text-xl font-bold text-blue-primary hover:underline">{item.title}</b></Link>
+          <p className="text-sm lg:text-md my-2 ">{item?.isiBerita.substring(0, 85)}...</p>
+          <b className="text-xs md:text-sm lg:text-sm text-gray-400">{new Date(item?.date).toLocaleDateString()}</b>
+          
         </CardFooter>
+        
       </Card>
 
     </>
