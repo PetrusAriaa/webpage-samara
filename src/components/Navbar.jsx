@@ -115,8 +115,8 @@ const Navbar = () => {
         </NavbarItem>
         <NavbarItem>
           <Link
-            href="#"
-            className="transition-colors text-neutral-400 cursor-not-allowed hover:bg-blue-secondary/25 hover:!text-blue-secondary rounded-md px-3 py-1"
+            href="/jadwal-misa"
+            className="transition-colors text-neutral-dark hover:bg-blue-secondary/25 hover:!text-blue-secondary rounded-md px-3 py-1"
           >
             Jadwal
           </Link>
@@ -131,8 +131,8 @@ const Navbar = () => {
         </NavbarItem>
         <NavbarItem>
           <Link
-            href="#"
-            className="transition-colors text-neutral-400 cursor-not-allowed hover:bg-blue-secondary/25 hover:!text-blue-secondary rounded-md px-3 py-1"
+            href="/galeri"
+            className="transition-colors text-neutral-dark hover:bg-blue-secondary/25 hover:!text-blue-secondary rounded-md px-3 py-1"
           >
             Galeri
           </Link>
