@@ -18,7 +18,8 @@ import Image from "next/image";
 const Navbar = () => {
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [scrollPos, setScrollPos] = useState(window.scrollY);
+  const [scrollPos, setScrollPos] = useState(0);
+  // const [scrollPos, setScrollPos] = useState(window.scrollY);
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
