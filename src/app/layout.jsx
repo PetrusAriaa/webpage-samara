@@ -41,9 +41,7 @@ export const metadata = {
   description: "Situs Web Resmi Gereja Santo Matias Rasul Kosambi Baru",
 };
 
-const Navbar = dynamic(() => import("@/components/Navbar"), {
-  ssr: false,
-})
+const Navbar = dynamic(() => import('@/components/Navbar'));
 
 export default function RootLayout({ children }) {
   return (
