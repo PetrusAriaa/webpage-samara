@@ -5,7 +5,7 @@ import { BeritaItem } from "@/app/ui/berita/berita-item";
 import { useEffect, useState } from "react";
 import Image from "next/image"
 
-export default function ShopPage() {
+export default function BeritaPage() {
   const [berita, setberita] = useState(null); 
 
   useEffect(() => {
@@ -20,7 +20,7 @@ export default function ShopPage() {
     fetchberita();
   }, []);
 
-  if (!berita) return <div>Not Found</div>;
+  if (!berita) return <div>Tidak ada berita</div>;
 
   return (
     <>
