@@ -1,5 +1,5 @@
 "use client";
-import { Dropdown, DropdownItem, DropdownTrigger, DropdownMenu , Button} from "@nextui-org/react"; 
+import { Dropdown, DropdownItem, DropdownTrigger, DropdownMenu, Button } from "@nextui-org/react";
 import {
   Navbar as NextUINavbar,
   NavbarContent,
@@ -114,13 +114,39 @@ const Navbar = () => {
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link
-            href="/jadwal-misa"
-            className="transition-colors text-neutral-dark hover:bg-blue-secondary/25 hover:!text-blue-secondary rounded-md px-3 py-1"
-          >
-            Jadwal
-          </Link>
+          <Dropdown>
+            <DropdownTrigger>
+              <Button
+                className="bg-transparent h-auto transition-colors text-neutral-dark hover:bg-blue-secondary/25 hover:!text-blue-secondary rounded-md px-3 py-1"
+              >
+                Jadwal
+              </Button>
+            </DropdownTrigger>
+            <DropdownMenu aria-label="Profil Menu" >
+              <DropdownItem>
+                <Link href="/jadwal-misa" className="w-full py-2 px-4">
+                  Jadwal Misa
+                </Link>
+              </DropdownItem>
+              <DropdownItem>
+                <Link href="/jadwal-kegiatan" className="w-full py-2 px-4">
+                  Jadwal Kegiatan Rutin
+                </Link>
+              </DropdownItem>
+              <DropdownItem>
+                <Link href="#" className="w-full py-2 px-4 text-neutral-400 cursor-not-allowed">
+                  Jadwal Layanan
+                </Link>
+              </DropdownItem>
+              <DropdownItem>
+                <Link href="#" className="w-full py-2 px-4 text-neutral-400 cursor-not-allowed">
+                  Jadwal Petugas Liturgi
+                </Link>
+              </DropdownItem>
+            </DropdownMenu>
+          </Dropdown>
         </NavbarItem>
+
         <NavbarItem>
           <Link
             href="/berita"
