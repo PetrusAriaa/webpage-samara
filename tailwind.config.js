@@ -12,13 +12,19 @@ module.exports = {
     extend: {
       fontFamily: {
         heading: ['var(--font-jakarta)'],
-        content: ['var(--font-trajan)'],
+        content: ['var(--font-karla)'],
+        ibara: ['var(--font-ibara)'],
       },
       colors: {
         "blue-primary": "#1A3783",
         "blue-secondary": "#0071B7",
         "white-secondary": "#F8F8F8",
         "dark-primary": "#0A1124",
+        "xmas-neutral": "#FDFAF1",
+        "xmas-primary": "#67171A",
+        "xmas-tertiary": "#B6A190",
+        "xmas-secondary": "#977E49",
+        "xmas-dark": "#232323"
       }
     },
   },

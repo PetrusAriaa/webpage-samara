@@ -85,10 +85,10 @@ const ZaitunPage = () => {
           <div className="px-4 h-full border-r bg-white">
           </div>
         </div>
-        <div className="flex justify-end w-full">
+        <div className="flex justify-end w-full bg-xmas-neutral">
           <div className="w-[45%] py-10 px-4 flex-shrink-0">
             <div className="w-full max-w-prose">
-              <h1 className="text-6xl font-heading font-bold leading-tight">Zaitun Edisi Natal 2024</h1>
+              <h1 className="text-8xl font-ibara font-bold leading-tight text-xmas-primary">Zaitun Edisi Natal 2024</h1>
               {/* <div className="flex gap-2 items-center text-sm mb-8">
                 <Link href="/" className="text-blue-secondary">Beranda</Link>
                 <MdChevronRight className="text-neutral-600" />
