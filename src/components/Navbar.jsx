@@ -1,5 +1,6 @@
 "use client";
-import { Dropdown, DropdownItem, DropdownTrigger, DropdownMenu, Button } from "@nextui-org/react";
+import { Dropdown, DropdownItem, DropdownTrigger, DropdownMenu } from "@nextui-org/dropdown";
+import { Button } from "@nextui-org/button";
 import {
   Navbar as NextUINavbar,
   NavbarContent,
