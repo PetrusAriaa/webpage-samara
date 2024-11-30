@@ -2,6 +2,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { MdChevronRight } from "react-icons/md";
 import ContentSection from "./ContentSection";
+import { Button } from "@nextui-org/button";
+
+import { HiHome } from "react-icons/hi";
+import { FaCompass } from "react-icons/fa6";
+import { FiLogOut } from "react-icons/fi";
+
 
 const Sponsors = () => {
   return (
@@ -59,18 +65,15 @@ const ZaitunPage = () => {
     <div className="min-h-screen">
       <div className="flex">
         <div className="h-screen w-[55%] fixed flex">
-          <div className="w-[16%] min-w-[180px] h-full bg-rose-950 p-2">
+          <div className="w-[16%] min-w-[180px] h-full bg-zinc-800 p-2">
             <p className="text-center italic text-white/50">Advertisements</p>
-            <div className="relative w-full aspect-[4/5] bg-slate-200 rounded flex overflow-hidden mb-2">
-              {/* <p className="text-3xl text-slate-500">A1</p> */}
+            <div className="relative w-full aspect-[4/5] bg-zinc-700 rounded flex overflow-hidden mb-2">
               <Image className="object-cover" fill priority alt="" src="/assets/ads-sample-1.png" />
             </div>
-            <div className="relative w-full aspect-[4/5] bg-slate-200 rounded flex overflow-hidden mb-2">
-              {/* <p className="text-3xl text-slate-500">A1</p> */}
+            <div className="relative w-full aspect-[4/5] bg-zinc-700 rounded flex overflow-hidden mb-2">
               <Image className="object-cover" fill priority alt="" src="/assets/ads-sample-2.png" />
             </div>
-            <div className="relative w-full aspect-[4/5] bg-slate-200 rounded flex overflow-hidden mb-2">
-              {/* <p className="text-3xl text-slate-500">A1</p> */}
+            <div className="relative w-full aspect-[4/5] bg-zinc-700 rounded flex overflow-hidden mb-2">
               <Image className="object-cover" fill priority alt="" src="/assets/ads-sample-3.png" />
             </div>
           </div>
@@ -79,10 +82,24 @@ const ZaitunPage = () => {
               <Image className="object-cover" fill priority alt="" src="/assets/zaitun-preview.webp" />
             </div>
           </div>
-          <div>
-            <div className="h-full w-2 bg-rose-600" />
-          </div>
-          <div className="px-4 h-full border-r bg-white">
+          <div className="px-2 py-6 h-full border-r border-xmas-tertiary/20 bg-xmas-neutral flex flex-col justify-between">
+            <div className="flex flex-col gap-2">
+              <Link href="/zaitun">
+                <div title="Beranda" className="p-2 hover:bg-xmas-tertiary/20 rounded-lg transition-colors">
+                  <HiHome className="text-2xl text-xmas-tertiary"/>
+                </div>
+              </Link>
+              <Link href="#">
+                <div title="Zaitun" className="p-2 hover:bg-xmas-tertiary/20 rounded-lg transition-colors">
+                  <FaCompass className="text-2xl text-xmas-tertiary"/>
+                </div>
+              </Link>
+            </div>
+            <Link href="/">
+              <div title="Keluar" className="p-2 hover:bg-xmas-tertiary/20 rounded-lg transition-colors">
+                <FiLogOut className="text-2xl text-xmas-tertiary"/>
+              </div>
+            </Link>
           </div>
         </div>
         <div className="flex justify-end w-full bg-xmas-neutral">
