@@ -92,7 +92,7 @@ const ContentSection3 = () => {
           <h3 className="text-xl font-heading text-blue-secondary">Peta Wilayah Paroki Kosambi Baru</h3>
           <div className="w-full h-[26rem] bg-neutral-300 rounded-lg animate-pulse" >
             <iframe src="https://www.google.com/maps/d/embed?mid=1hB2Spsg2Jozjy0NUO19lz7-Kr4ICcAg&ehbc=2E312F&scrollwheel=true" height="100%"
-          loading="lazy" referrerpolicy="no-referrer-when-downgrade" pointer-events="none" style={{ width: "100%" }}></iframe>
+          loading="lazy" referrerPolicy="no-referrer-when-downgrade" pointerEvents="none" style={{ width: "100%" }}></iframe>
     
           </div>
         </div>
