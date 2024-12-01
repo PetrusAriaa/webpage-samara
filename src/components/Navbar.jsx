@@ -11,6 +11,7 @@ import {
 
 } from "@nextui-org/navbar";
 import Link from "next/link";
+import { Accordion, AccordionItem } from "@nextui-org/accordion";
 import { Button } from "@nextui-org/button";
 import { usePathname } from "next/navigation";
 import { BsList, BsXLg } from "react-icons/bs";
@@ -171,79 +172,78 @@ const Navbar = () => {
           <Link
             onClick={() => setIsMenuOpen(false)}
             href="/"
-            className="w-full hover:bg-teal-secondary/75 hover:text-white transition-colors text-xl py-2 px-4 border-b border-slate-200"
+            className="w-full hover:!text-blue-secondary hover:text-white transition-colors text-md py-2 px-4 border-b border-slate-200"
           >
             Beranda
           </Link>
         </NavbarMenuItem>
+
         <NavbarMenuItem className="flex">
-          <Link
-            onClick={() => setIsMenuOpen(false)}
-            href="/visi-misi"
-            className="w-full hover:bg-teal-secondary/75 hover:text-white transition-colors text-xl py-2 px-4 border-b border-slate-200"
-          >
-            Visi dan Misi
-          </Link>
+          <Accordion showDivider >
+            <AccordionItem title='Profil'
+              className='transition-colors transition-colors px-2 border-b border-slate-200'
+            >
+              <div className="flex flex-col gap-2 pl-4">
+                <Link href="/visi-misi"
+                  onClick={() => setMenuOpen(false)}
+                  className="hover:text-blue-secondary transition-colors w-fit">
+                  Visi dan Misi
+                </Link>
+                <Link href="/sejarah"
+                  onClick={() => setMenuOpen(false)}
+                  className="hover:text-blue-secondary transition-colors w-fit">
+                  Sejarah Paroki
+                </Link>
+                <Link href="/profil-pastor"
+                  onClick={() => setMenuOpen(false)}
+                  className="hover:text-blue-secondary transition-colors w-fit">
+                  Profil Pastor
+                </Link>
+              </div>
+            </AccordionItem>
+          </Accordion>
         </NavbarMenuItem>
+
         <NavbarMenuItem className="flex">
-          <Link
-            onClick={() => setIsMenuOpen(false)}
-            href="/sejarah-paroki"
-            className="w-full hover:bg-teal-secondary/75 hover:text-white transition-colors text-xl py-2 px-4 border-b border-slate-200"
-          >
-            Sejarah Paroki
-          </Link>
-        </NavbarMenuItem>
-        <NavbarMenuItem className="flex">
-          <Link
-            onClick={() => setIsMenuOpen(false)}
-            href="/"
-            className="w-full hover:bg-teal-secondary/75 hover:text-white transition-colors text-xl py-2 px-4 border-b border-slate-200"
-          >
-            Profil Pastor
-          </Link>
-        </NavbarMenuItem>
-        <NavbarMenuItem className="flex">
-          <Link
-            onClick={() => setIsMenuOpen(false)}
-            href="/zaitun"
-            className="w-full hover:bg-teal-secondary/75 hover:text-white transition-colors text-xl py-2 px-4 border-b border-slate-200"
-          >
+          <Link onClick={() => setIsMenuOpen(false)} href="/zaitun"
+            className="w-full hover:text-blue-secondary transition-colors py-2 px-4 border-b border-slate-200">
             Zaitun
           </Link>
         </NavbarMenuItem>
+
         <NavbarMenuItem className="flex">
-          <Link
-            onClick={() => setIsMenuOpen(false)}
-            href="/jadwal-misa"
-            className="w-full hover:bg-teal-secondary/75 hover:text-white transition-colors text-xl py-2 px-4 border-b border-slate-200"
-          >
-            Jadwal Misa
-          </Link>
+          <Accordion showDivider >
+            <AccordionItem title='Jadwal'
+              className='transition-colors transition-colors px-2 border-b border-slate-200'
+            >
+              <div className="flex flex-col gap-2 pl-4">
+                <Link href="/jadwal-misa"
+                  onClick={() => setMenuOpen(false)}
+                  className="hover:text-blue-secondary  transition-colors w-fit">
+                  Jadwal Misa
+                </Link>
+                <Link href="/jadwal-kegiatan"
+                  onClick={() => setMenuOpen(false)}
+                  className="hover:text-blue-secondary transition-colors w-fit">
+                  Jadwal Kegiatan
+                </Link>
+                <Link href="/jadwal-layanan"
+                  onClick={() => setMenuOpen(false)}
+                  className="hover:text-blue-secondary transition-colors w-fit">
+                  Jadwal Layanan
+                </Link>
+              </div>
+            </AccordionItem>
+          </Accordion>
         </NavbarMenuItem>
-        <NavbarMenuItem className="flex">
-          <Link
-            onClick={() => setIsMenuOpen(false)}
-            href="/jadwal-kegiatan"
-            className="w-full hover:bg-teal-secondary/75 hover:text-white transition-colors text-xl py-2 px-4 border-b border-slate-200"
-          >
-            Jadwal Kegiatan Rutin
-          </Link>
-        </NavbarMenuItem>
-        <NavbarMenuItem className="flex">
-          <Link
-            onClick={() => setIsMenuOpen(false)}
-            href="/jadwal-layanan"
-            className="w-full hover:bg-teal-secondary/75 hover:text-white transition-colors text-xl py-2 px-4 border-b border-slate-200"
-          >
-            Jadwal Layanan
-          </Link>
-        </NavbarMenuItem>
+
+        
+        
         <NavbarMenuItem className="flex">
           <Link
             onClick={() => setIsMenuOpen(false)}
             href="/berita"
-            className="w-full hover:bg-teal-secondary/75 hover:text-white transition-colors text-xl py-2 px-4 border-b border-slate-200"
+            className="w-full hover:text-blue-secondary transition-colors py-2 px-4 border-b border-slate-200"
           >
             Berita
           </Link>
@@ -252,7 +252,7 @@ const Navbar = () => {
           <Link
             onClick={() => setIsMenuOpen(false)}
             href="/galeri"
-            className="w-full hover:bg-teal-secondary/75 hover:text-white transition-colors text-xl py-2 px-4 border-b border-slate-200"
+            className="w-full hover:text-blue-secondary transition-colors py-2 px-4 border-b border-slate-200"
           >
             Galeri
           </Link>
