@@ -185,17 +185,17 @@ const Navbar = () => {
             >
               <div className="flex flex-col gap-2 pl-4">
                 <Link href="/visi-misi"
-                  onClick={() => setMenuOpen(false)}
+                  onClick={() => setIsMenuOpen(false)}
                   className="hover:text-blue-secondary transition-colors w-fit">
                   Visi dan Misi
                 </Link>
                 <Link href="/sejarah"
-                  onClick={() => setMenuOpen(false)}
+                  onClick={() => setIsMenuOpen(false)}
                   className="hover:text-blue-secondary transition-colors w-fit">
                   Sejarah Paroki
                 </Link>
                 <Link href="/profil-pastor"
-                  onClick={() => setMenuOpen(false)}
+                  onClick={() => setIsMenuOpen(false)}
                   className="hover:text-blue-secondary transition-colors w-fit">
                   Profil Pastor
                 </Link>
@@ -218,17 +218,17 @@ const Navbar = () => {
             >
               <div className="flex flex-col gap-2 pl-4">
                 <Link href="/jadwal-misa"
-                  onClick={() => setMenuOpen(false)}
+                  onClick={() => setIsMenuOpen(false)}
                   className="hover:text-blue-secondary  transition-colors w-fit">
                   Jadwal Misa
                 </Link>
                 <Link href="/jadwal-kegiatan"
-                  onClick={() => setMenuOpen(false)}
+                  onClick={() => setIsMenuOpen(false)}
                   className="hover:text-blue-secondary transition-colors w-fit">
                   Jadwal Kegiatan
                 </Link>
                 <Link href="/jadwal-layanan"
-                  onClick={() => setMenuOpen(false)}
+                  onClick={() => setIsMenuOpen(false)}
                   className="hover:text-blue-secondary transition-colors w-fit">
                   Jadwal Layanan
                 </Link>
