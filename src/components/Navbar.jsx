@@ -20,6 +20,7 @@ import Image from "next/image";
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrollPos, setScrollPos] = useState(0);
+  const [isProfileMenuOpen, setIsProfileMenuOpen] = useState(false);
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -170,18 +171,90 @@ const Navbar = () => {
           <Link
             onClick={() => setIsMenuOpen(false)}
             href="/"
-            className="w-full hover:bg-teal-secondary/75 hover:text-white transition-colors py-2 px-4 border-b border-slate-200"
+            className="w-full hover:bg-teal-secondary/75 hover:text-white transition-colors text-xl py-2 px-4 border-b border-slate-200"
           >
-            Home
+            Beranda
           </Link>
         </NavbarMenuItem>
         <NavbarMenuItem className="flex">
           <Link
             onClick={() => setIsMenuOpen(false)}
-            href="/about"
+            href="/visi-misi"
             className="w-full hover:bg-teal-secondary/75 hover:text-white transition-colors text-xl py-2 px-4 border-b border-slate-200"
           >
-            About Us
+            Visi dan Misi
+          </Link>
+        </NavbarMenuItem>
+        <NavbarMenuItem className="flex">
+          <Link
+            onClick={() => setIsMenuOpen(false)}
+            href="/sejarah-paroki"
+            className="w-full hover:bg-teal-secondary/75 hover:text-white transition-colors text-xl py-2 px-4 border-b border-slate-200"
+          >
+            Sejarah Paroki
+          </Link>
+        </NavbarMenuItem>
+        <NavbarMenuItem className="flex">
+          <Link
+            onClick={() => setIsMenuOpen(false)}
+            href="/"
+            className="w-full hover:bg-teal-secondary/75 hover:text-white transition-colors text-xl py-2 px-4 border-b border-slate-200"
+          >
+            Profil Pastor
+          </Link>
+        </NavbarMenuItem>
+        <NavbarMenuItem className="flex">
+          <Link
+            onClick={() => setIsMenuOpen(false)}
+            href="/zaitun"
+            className="w-full hover:bg-teal-secondary/75 hover:text-white transition-colors text-xl py-2 px-4 border-b border-slate-200"
+          >
+            Zaitun
+          </Link>
+        </NavbarMenuItem>
+        <NavbarMenuItem className="flex">
+          <Link
+            onClick={() => setIsMenuOpen(false)}
+            href="/jadwal-misa"
+            className="w-full hover:bg-teal-secondary/75 hover:text-white transition-colors text-xl py-2 px-4 border-b border-slate-200"
+          >
+            Jadwal Misa
+          </Link>
+        </NavbarMenuItem>
+        <NavbarMenuItem className="flex">
+          <Link
+            onClick={() => setIsMenuOpen(false)}
+            href="/jadwal-kegiatan"
+            className="w-full hover:bg-teal-secondary/75 hover:text-white transition-colors text-xl py-2 px-4 border-b border-slate-200"
+          >
+            Jadwal Kegiatan Rutin
+          </Link>
+        </NavbarMenuItem>
+        <NavbarMenuItem className="flex">
+          <Link
+            onClick={() => setIsMenuOpen(false)}
+            href="/jadwal-layanan"
+            className="w-full hover:bg-teal-secondary/75 hover:text-white transition-colors text-xl py-2 px-4 border-b border-slate-200"
+          >
+            Jadwal Layanan
+          </Link>
+        </NavbarMenuItem>
+        <NavbarMenuItem className="flex">
+          <Link
+            onClick={() => setIsMenuOpen(false)}
+            href="/berita"
+            className="w-full hover:bg-teal-secondary/75 hover:text-white transition-colors text-xl py-2 px-4 border-b border-slate-200"
+          >
+            Berita
+          </Link>
+        </NavbarMenuItem>
+        <NavbarMenuItem className="flex">
+          <Link
+            onClick={() => setIsMenuOpen(false)}
+            href="/galeri"
+            className="w-full hover:bg-teal-secondary/75 hover:text-white transition-colors text-xl py-2 px-4 border-b border-slate-200"
+          >
+            Galeri
           </Link>
         </NavbarMenuItem>
       </NavbarMenu>
