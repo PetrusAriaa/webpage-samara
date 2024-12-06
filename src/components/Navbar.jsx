@@ -137,7 +137,7 @@ const Navbar = () => {
                 </Link>
               </DropdownItem>
               <DropdownItem>
-                <Link href="#" className="w-full py-2 px-4 text-neutral-400 cursor-not-allowed">
+                <Link href="/jadwal-layanan" className="w-full py-2 px-4">
                   Jadwal Layanan
                 </Link>
               </DropdownItem>
