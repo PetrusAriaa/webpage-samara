@@ -71,13 +71,13 @@ const Header = () => {
 const ContentSection = () => {
   return (
     <div className="flex w-full min-h-screen justify-center bg-white">
-      <div className="w-4/5 max-w-[1300px] py-20">
-        <div className="flex gap-8">
+      <div className="w-4/5 max-w-[1300px] py-10 md:py-20">
+        <div className="flex flex-col md:grid md:grid-cols-3 gap-8">
           <CardItem img="/assets/romo-yus.webp" nama="RD. Aloysius Yus Noron" posisi="Pastor Kepala" masaJabat="2022 - sekarang" />
           <CardItem img="/assets/romo-silvester.webp" nama="RD. Silvester Hari Pamungkas" posisi="Pastor Rekan" masaJabat="2023 - sekarang" />
           <CardItem img="/assets/romo-gunadi.webp" nama="RD. Gunadi Emmanuel" posisi="Pastor Residensi" masaJabat="" />
         </div>
-        <div className="grid grid-cols-4 mt-10 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 mt-10 gap-8 overflow-x-auto">
           <RomoChips img="/assets/romo-jacobus.webp" nama="RD. Jacobus Tarigan" masaJabat="2005 - 2009" />
           <RomoChips img="/assets/romo-suherman.webp" nama="RD. Fx Suherman" masaJabat="2006 - 2008" />
           <RomoChips img="/assets/romo-didit.webp" nama="RD. A. Didit Supartono" masaJabat="2009 - 2011" />
@@ -89,8 +89,8 @@ const ContentSection = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 const ProfilPastorPage = () => {
   return (
