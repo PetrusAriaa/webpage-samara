@@ -100,7 +100,7 @@ const Navbar = () => {
                 </Link>
               </DropdownItem>
               <DropdownItem>
-                <Link href="#" className="w-full py-2 px-4 text-neutral-400 cursor-not-allowed">
+                <Link href="/susunan-pengurus" className="w-full py-2 px-4">
                   Susunan Pengurus
                 </Link>
               </DropdownItem>
@@ -142,7 +142,7 @@ const Navbar = () => {
                 </Link>
               </DropdownItem>
               <DropdownItem>
-                <Link href="#" className="w-full py-2 px-4 text-neutral-400 cursor-not-allowed">
+                <Link href="/petugas-liturgi" className="w-full py-2 px-4">
                   Jadwal Petugas Liturgi
                 </Link>
               </DropdownItem>
@@ -199,6 +199,11 @@ const Navbar = () => {
                   className="hover:text-blue-secondary transition-colors w-fit">
                   Profil Pastor
                 </Link>
+                <Link href="/susunan-pengurus"
+                  onClick={() => setIsMenuOpen(false)}
+                  className="hover:text-blue-secondary transition-colors w-fit">
+                  Susunan Pengurus
+                </Link>
               </div>
             </AccordionItem>
           </Accordion>
@@ -231,6 +236,11 @@ const Navbar = () => {
                   onClick={() => setIsMenuOpen(false)}
                   className="hover:text-blue-secondary transition-colors w-fit">
                   Jadwal Layanan
+                </Link>
+                <Link href="/petugas-liturgi"
+                  onClick={() => setIsMenuOpen(false)}
+                  className="hover:text-blue-secondary transition-colors w-fit">
+                  Jadwal Petugas Liturgi
                 </Link>
               </div>
             </AccordionItem>
