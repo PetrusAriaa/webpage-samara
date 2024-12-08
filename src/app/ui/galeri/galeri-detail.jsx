@@ -44,7 +44,7 @@ export const GaleriDetail = ({ galeri }) => {
 
     return (
         <section className="py-12">
-            <article className="max-w-4xl mx-auto p-4 lg:p-6  shadow-lg border rounded-md">
+            <article className="max-w-4xl mx-auto p-4 lg:p-6 bg-gray-100 shadow-lg border rounded-md">
 
                 <div className="lg:mt-7 mt-4">
                     <Link href="/galeri">

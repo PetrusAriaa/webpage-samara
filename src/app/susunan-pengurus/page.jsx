@@ -1,4 +1,8 @@
+"use client";
 import Image from "next/image"
+import { notFound } from "next/navigation";
+import { PengurusItem } from "@/app/ui/pengurus/pengurus-item";
+import { useEffect, useState } from "react";
 
 const Header = () => {
   return (
@@ -25,12 +29,53 @@ const Header = () => {
   )
 }
 
-const SusunanPengurusPage = () => {
-    return (
-      <>
-        <Header />
-      </>
-    )
+const BidangPengurus = () => {
+  const [bidang, setBidang] = useState(null);
+
+  useEffect(() => {
+    const fetchBidang = async () => {
+      try {
+        const response = await fetch(`/api/pengurus`);
+        if (!response.ok) {
+          throw new Error("Failed to fetch data");
+        }
+        const data = await response.json();
+        setBidang(data || []);
+      } catch (error) {
+        console.error("Error fetching bidang:", error);
+        setBidang([]); // Set to an empty array in case of an error
+      }
+    };
+    fetchBidang();
+  }, []);
+
+  if (!bidang) {
+    return <div>Loading...</div>; // Show a loading state while the data is being fetched
   }
-  
-  export default SusunanPengurusPage
+
+  if (bidang.length === 0) {
+    return <div>Belum menginput data pengurus</div>; // Handle empty data
+  }
+
+  return (
+    <div>
+      <div className="grid grid-cols-2 py-2 gap-2 mx-2 sm:grid-cols-3 sm:py-3 sm:gap-3 sm:mx-3 md:grid-cols-3 md:py-6 md:gap-4 md:mx-3 lg:grid-cols-4 lg:py-8 lg:gap-6 lg:mx-4">
+        {bidang.map((item) => (
+          <PengurusItem key={item.id} item={item} />
+        ))}
+      </div>
+    </div>
+  );
+};
+
+
+const SusunanPengurusPage = () => {
+  return (
+    <>
+      <Header />
+      <BidangPengurus />
+    </>
+  )
+}
+
+export default SusunanPengurusPage

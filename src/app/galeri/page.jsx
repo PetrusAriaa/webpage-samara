@@ -58,8 +58,8 @@ function GaleriCard({ item }) {
     const firstImage = images[0]?.imageUrl || "/assets/default-image.png";
 
     return (
-        <Link href={`/galeri/${item.id}`} className="flex w-full">
-            <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 hover:underline" >
+        <Link href={`/galeri/${item.id}`} className="flex w-full ">
+            <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer hover:bg-black/5" >
                 <div className="relative w-full h-40 overflow-hidden rounded-t-lg">
                     <Image
                         src={firstImage}

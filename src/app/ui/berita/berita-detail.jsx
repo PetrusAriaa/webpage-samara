@@ -19,7 +19,7 @@ export const BeritaDetail = ({ berita }) => {
 
     return (
         <section className="py-12">
-            <article className="max-w-4xl mx-auto p-6 shadow-md border rounded-lg">
+            <article className="max-w-4xl mx-auto p-6 bg-gray-100 shadow-md border rounded-lg">
                 <div className="lg:mt-7">
                     <Link href="/berita">
                         <Button className="text-lg text-white bg-blue-secondary hover:bg-dark/80 mt-7 my-5">
