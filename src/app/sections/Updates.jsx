@@ -2,7 +2,6 @@
 
 import { Button } from "@nextui-org/button"
 import Image from "next/image"
-import Link from "next/link"
 import { useRef, useState } from "react"
 
 import { Swiper, SwiperSlide } from 'swiper/react'
@@ -48,8 +47,8 @@ const UpdatesSection = () => {
 
   return (
     <>
-      <div className="w-full bg-dark-primary flex flex-row-reverse text-white">
-        <div className="w-1/2">
+      <div className="w-full bg-dark-primary text-white flex flex-col md:flex-row-reverse shadow-lg">
+        <div className="w-full md:w-1/2">
           <Swiper
             autoplay={{
               delay: 2500,
@@ -65,7 +64,7 @@ const UpdatesSection = () => {
                 return (
                   <SwiperSlide key={i}>
                     <div className="overflow-hidden">
-                      <div className="relative h-[50vh] max-h-[720px] w-full hover:scale-110 transition-transform bg-blue-primary/50">
+                      <div className="relative h-[30vh] md:h-[50vh] max-h-[720px] w-full hover:scale-110 transition-transform bg-blue-primary/50">
                         <Image
                           src={String(item.img)}
                           alt={String(item.title)}
@@ -80,14 +79,14 @@ const UpdatesSection = () => {
             }
           </Swiper>
         </div>
-        <div className="flex justify-end w-1/2 max-w-[650px]">
+        <div className="flex justify-end w-full md:w-1/2 max-w-[650px]">
           <div className="p-8 text-white flex flex-col justify-between">
             <div>
-              <p className="font-heading text text-blue-secondary mb-4 font-bold tracking-[10px]">BERITA PAROKI</p>
-              <h1 className="font-heading text-5xl font-bold line-clamp-2 mb-4 leading-normal">{DUMMY_NEWS[currentNews].title}</h1>
-              <p className="line-clamp-2">{DUMMY_NEWS[currentNews].description}</p>
+              <p className="font-heading text-blue-secondary mb-2 md:mb-4 font-bold tracking-[5px] md:tracking-[10px] text-sm md:text-base">BERITA PAROKI</p>
+              <h1 className="font-heading text-2xl md:text-5xl font-bold line-clamp-2 mb-2 md:mb-4 leading-normal">{DUMMY_NEWS[currentNews].title}</h1>
+              <p className="line-clamp-3 md:line-clamp-2 text-sm md:text-base">{DUMMY_NEWS[currentNews].description}</p>
             </div>
-            <div className="flex gap-4 justify-end">
+            <div className="flex gap-4 justify-center lg:justify-end pt-5">
               <Button onPress={slidePrev} disableRipple isIconOnly variant="ghost" radius="full" color="primary" size="sm">{"<"}</Button>
               <Button onPress={slideNext} disableRipple isIconOnly variant="ghost" radius="full" color="primary" size="sm">{">"}</Button>
             </div>
