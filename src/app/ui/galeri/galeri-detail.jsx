@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@nextui-org/button";
 import Masonry from "react-masonry-css";
+import { useRouter } from "next/navigation";
 
 export const GaleriDetail = ({ galeri }) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -42,16 +43,16 @@ export const GaleriDetail = ({ galeri }) => {
 
     const selectedImage = selectedImageIndex !== null ? galeri.images[selectedImageIndex] : null;
 
+    const router = useRouter();
+
     return (
         <section className="py-12">
             <article className="max-w-4xl mx-auto p-4 lg:p-6 bg-gray-100 shadow-lg border rounded-md">
 
                 <div className="lg:mt-7 mt-4">
-                    <Link href="/galeri">
-                        <Button className="text-lg text-white bg-blue-secondary hover:bg-dark/80 mt-5">
-                            Back
-                        </Button>
-                    </Link>
+                    <Button onClick={() => router.back()} className="text-lg text-white bg-blue-secondary hover:bg-dark/80 mt-7 my-5">
+                        Back
+                    </Button>
                 </div>
 
                 <div className="my-7 text-center">
@@ -86,12 +87,12 @@ export const GaleriDetail = ({ galeri }) => {
                 {isOpen && selectedImage && (
                     <div
                         id="popup-overlay"
-                        className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50"
+                        className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 px-6 lg:px-0"
                         onClick={closePopupOnOutsideClick}
                     >
                         <div className="relative">
                             <Image
-                                className="max-w-full max-h-[90vh] rounded-md"
+                                className="max-w-full max-h-[90vh]  rounded-md"
                                 alt={selectedImage.alt || galeri.title}
                                 src={selectedImage.imageUrl}
                                 width={410}

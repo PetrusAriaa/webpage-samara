@@ -3,6 +3,7 @@ import { Button } from "@nextui-org/button";
 import Link from "next/link";
 import { useState } from "react";
 import Image from "next/image"
+import { useRouter } from "next/navigation";
 
 export const BeritaDetail = ({ berita }) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -17,15 +18,15 @@ export const BeritaDetail = ({ berita }) => {
         }
     };
 
+    const router = useRouter();
+
     return (
         <section className="py-12">
             <article className="max-w-4xl mx-auto p-6 bg-gray-100 shadow-md border rounded-lg">
                 <div className="lg:mt-7">
-                    <Link href="/berita">
-                        <Button className="text-lg text-white bg-blue-secondary hover:bg-dark/80 mt-7 my-5">
-                            Back
-                        </Button>
-                    </Link>
+                    <Button onClick={() => router.back()} className="text-lg text-white bg-blue-secondary hover:bg-dark/80 mt-7 my-5">
+                        Back
+                    </Button>
                 </div>
                 <div
                     className="relative shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 group cursor-pointer"
