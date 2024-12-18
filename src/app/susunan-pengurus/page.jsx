@@ -43,19 +43,17 @@ const BidangPengurus = () => {
         setBidang(data || []);
       } catch (error) {
         console.error("Error fetching bidang:", error);
-        setBidang([]); // Set to an empty array in case of an error
+        setBidang([]); 
       }
     };
     fetchBidang();
   }, []);
 
-  if (!bidang) {
-    return <div>Loading...</div>; // Show a loading state while the data is being fetched
-  }
 
-  if (bidang.length === 0) {
-    return <div>Belum menginput data pengurus</div>; // Handle empty data
+  if (!bidang || bidang.length === 0) {
+    return <div>Belum menginput data pengurus</div>; 
   }
+  
 
   return (
     <div>
