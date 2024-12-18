@@ -19,7 +19,7 @@ const AgendaParokiSection = () => {
     fetchberita();
   }, []);
 
-  if (!berita) return <div className="text-center text-gray-500 py-8">Tidak ada berita</div>;
+  if (!berita) return <div className="text-center text-gray-500 py-8">Tidak ada berita.</div>;
   return (
     <div className="w-full flex justify-center  bg-white-secondary">
       <div className="w-[95%] max-w-[1300px]">

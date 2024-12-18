@@ -16,7 +16,7 @@ const FotoTerbaruSection = () => {
     fetchGaleri();
   }, []);
 
-  if (!galeri.length) return <div className="text-center text-gray-500 py-8">Tidak ada galeri yang tersedia.</div>;
+  if (!galeri.length) return <div className="text-center text-gray-500 py-8">Tidak ada galeri.</div>;
 
   return (
     <div className="w-full flex justify-center ">
