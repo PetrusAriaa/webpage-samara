@@ -32,7 +32,7 @@ const JadwalKegiatanRutin = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-14 md:gap-0  " >
 
-                    <div className="flex flex-col gap-0 p-4">
+                    <div className="flex flex-col gap-0 p-4 md:border-r md:border-b">
                         <div className="flex flex-col items-center justify-center gap-2">
                             {/* <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <rect x="0.467285" y="0.529846" width="50.7935" height="50.7935" rx="7" fill="#0071B7" />
@@ -92,7 +92,7 @@ const JadwalKegiatanRutin = () => {
                         </div>
                     </div>
 
-                    <div className="flex flex-col gap-0 p-4">
+                    <div className="flex flex-col gap-0 p-4 md:border-t md:border-l">
                         <div className="flex flex-col items-center justify-center">
                             {/* <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <rect x="0.892578" y="0.529846" width="50.7935" height="50.7935" rx="7" fill="#0071B7" />
