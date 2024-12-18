@@ -18,7 +18,7 @@ export const PengurusDetail = ({ pengurus }) => {
               </Link>
             </div>
 
-            <h2 className=" text-3xl font-bold mb-6 text-center text-blue-600">
+            <h2 className=" text-3xl font-bold mb-6 text-center text-blue-primary">
               {pengurus.namaBidang}
             </h2>
 
@@ -49,7 +49,7 @@ export const PengurusDetail = ({ pengurus }) => {
 
                 {pengurusItem.seksi.map((seksi, seksiIndex) => (
                   <div key={seksiIndex} className="flex flex-col mt-2 sm:mt-4 md:mt-6 lg:mt-9">
-                    <h3 className="text-2xl font-semibold border-b-2 border-blue-500 pb-2 mt-4 text-center">
+                    <h3 className="text-2xl font-semibold border-b-2 border-gray-300 pb-2 mt-4 text-center">
                       {seksi.namaSeksi}
                     </h3>
 
