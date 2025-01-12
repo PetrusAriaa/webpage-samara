@@ -50,7 +50,7 @@ export const GaleriDetail = ({ galeri }) => {
             <article className="max-w-4xl mx-auto p-4 lg:p-6 bg-gray-100 shadow-lg border rounded-md">
 
                 <div className="lg:mt-7 mt-4">
-                    <Button onClick={() => router.back()} className="text-lg text-white bg-blue-secondary hover:bg-dark/80 mt-7 my-5">
+                    <Button onClick={() => router.back()} className="text-lg text-white bg-blue-secondary hover:bg-dark/80 mt-7 ">
                         Back
                     </Button>
                 </div>
