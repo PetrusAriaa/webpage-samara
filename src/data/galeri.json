@@ -5,22 +5,12 @@
         "description": "Tablo Visualisasi Kisah Sengsara Yesus, diselenggarakan oleh OMK Wilayah 10",
         "date": "10 April 2024",
         "images": [
-            {"id": 102, "imageUrl": "/assets/ads-sample-1.png"},
-            {"id": 101, "imageUrl": "/assets/ads-sample-2.png"},
-            {"id": 104, "imageUrl": "/assets/image-4.png"},
-            {"id": 103, "imageUrl": "/assets/ads-sample-3.png"},
-            {"id": 105, "imageUrl": "/assets/image-5.png"},
-            {"id": 106, "imageUrl": "/assets/thumbBerita/1.jpg"},
-            {"id": 107, "imageUrl": "/assets/romo-almo.webp"},
-            {"id": 108, "imageUrl": "/assets/romo-didit.webp"},
-            {"id": 109, "imageUrl": "/assets/romo-gunadi.webp"},
-            {"id": 110, "imageUrl": "/assets/romo-jacobus.webp"},
-            {"id": 111, "imageUrl": "/assets/thumbGaleri/galeri-hero.png"},
-            {"id": 112, "imageUrl": "/assets/sejarah-paroki_03.webp"},
-            {"id": 113, "imageUrl": "/assets/thumbBerita/1.jpg"},
-            {"id": 114, "imageUrl": "/assets/VISI-DAN-MISI_05.png"},
-            {"id": 115, "imageUrl": "/assets/VISI-DAN-MISI_13.png"},
-            {"id": 116, "imageUrl": "/assets/zaitun-preview.webp"}
+            {"id": 101, "imageUrl": "/assets/galeri/tablo_jalan_salib_2024/Tablo1.jpg"},
+            {"id": 102, "imageUrl": "/assets/galeri/tablo_jalan_salib_2024/Tablo2.jpeg"},
+            {"id": 103, "imageUrl": "/assets/galeri/tablo_jalan_salib_2024/TAblo3.jpeg"},
+            {"id": 104, "imageUrl": "/assets/galeri/tablo_jalan_salib_2024/Tablo4.jpeg"},
+            {"id": 105, "imageUrl": "/assets/galeri/tablo_jalan_salib_2024/Tablo5.jpeg"},
+            {"id": 106, "imageUrl": "/assets/galeri/tablo_jalan_salib_2024/Tablo6.jpeg"}
         ]
     },
     {
@@ -29,22 +19,12 @@
         "description": "Dokumentasi Misa Kamis Putih 2024",
         "date": "9 April 2024",
         "images": [
-            {"id": 201, "imageUrl": "/assets/ads-sample-2.png"},
-            {"id": 202, "imageUrl": "/assets/ads-sample-1.png"},
-            {"id": 204, "imageUrl": "/assets/image-4.png"},
-            {"id": 203, "imageUrl": "/assets/ads-sample-3.png"},
-            {"id": 205, "imageUrl": "/assets/image-5.png"},
-            {"id": 206, "imageUrl": "/assets/thumbBerita/1.jpg"},
-            {"id": 207, "imageUrl": "/assets/romo-almo.webp"},
-            {"id": 208, "imageUrl": "/assets/romo-didit.webp"},
-            {"id": 209, "imageUrl": "/assets/romo-gunadi.webp"},
-            {"id": 210, "imageUrl": "/assets/romo-jacobus.webp"},
-            {"id": 211, "imageUrl": "/assets/thumbGaleri/galeri-hero.png"},
-            {"id": 212, "imageUrl": "/assets/sejarah-paroki_03.webp"},
-            {"id": 213, "imageUrl": "/assets/thumbBerita/1.jpg"},
-            {"id": 214, "imageUrl": "/assets/VISI-DAN-MISI_05.png"},
-            {"id": 215, "imageUrl": "/assets/VISI-DAN-MISI_13.png"},
-            {"id": 216, "imageUrl": "/assets/zaitun-preview.webp"}
+            {"id": 201, "imageUrl": "/assets/galeri/kamis_putih_2024/KAMISPUTIH1.jpg"},
+            {"id": 202, "imageUrl": "/assets/galeri/kamis_putih_2024/KamisPutih2.jpg"},
+            {"id": 204, "imageUrl": "/assets/galeri/kamis_putih_2024/KamisPutih3.jpg"},
+            {"id": 203, "imageUrl": "/assets/galeri/kamis_putih_2024/KamisPutih4.jpg"},
+            {"id": 205, "imageUrl": "/assets/galeri/kamis_putih_2024/KamisPutih5.jpg"},
+            {"id": 206, "imageUrl": "/assets/galeri/kamis_putih_2024/KamisPutih2.jpg"}
         ]
     }
 ]
