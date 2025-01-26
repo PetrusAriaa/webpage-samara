@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { useEffect, useState } from "react";
 import { PengurusDetail } from "@/app/ui/pengurus/pengurus-detail";
 
-export default function susunanPengurusPage({ params: paramsPromise }) {
+export default function SusunanPengurusPage({ params: paramsPromise }) {
   const [pengurus, setpengurus] = useState(null);
   const [id, setId] = useState(null);
 
