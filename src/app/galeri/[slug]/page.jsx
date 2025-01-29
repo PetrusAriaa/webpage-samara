@@ -1,7 +1,7 @@
 "use client";
 
 import { use, useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
+import { notFound } from "next/navigation";
 import { GaleriDetail } from "@/app/ui/galeri/galeri-detail";
 
 const slugify = (text) =>
@@ -11,32 +11,23 @@ const slugify = (text) =>
     .replace(/^-+|-+$/g, '');
 
 export default function GaleriPage({ params }) {
-  const { slug } = use(params); // Menggunakan React.use() untuk mendapatkan params
+  const { slug } = use(params);
   const [galeri, setGaleri] = useState(null);
-  const router = useRouter();
 
   useEffect(() => {
-    const fetchGaleri = async () => {
-      try {
+    if (slug) {
+      const fetchGaleri = async () => {
         const response = await fetch(`/api/galeri`);
-        if (!response.ok) throw new Error("Failed to fetch data");
-
         const data = await response.json();
         const galeriItem = data.find((item) => slugify(item.title) === slug);
 
-        if (!galeriItem) {
-          router.push("/404");
-          return;
-        }
+        if (!galeriItem) return notFound();
 
         setGaleri(galeriItem);
-      } catch (error) {
-        console.error("Error fetching galeri:", error);
-        router.push("/404");
-      }
-    };
+      };
 
-    fetchGaleri();
+      fetchGaleri();
+    }
   }, [slug]);
 
   if (!galeri) return <div>Loading...</div>;
