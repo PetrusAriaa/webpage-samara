@@ -5,23 +5,39 @@ import { FiLogOut } from "react-icons/fi";
 import { HiHome } from "react-icons/hi";
 import { MdChevronRight, MdChevronLeft } from "react-icons/md";
 
-const Contents = () => {
+const Contents = ({articleContent}) => {
+  const jsonData = JSON.parse(articleContent)
+  console.log(jsonData.blocks)
+
   return (
     <div className="mb-20">
-      <div className="w-full aspect-[16/9] bg-blue-primary/40 flex justify-center items-center rounded-xl my-8">
-        <p>Headline Picture</p>
-      </div>
-      <p className="mb-4 text-xmas-dark">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus sit dolore iste tenetur fugiat laboriosam aut eligendi a totam nostrum magnam unde ex porro odit voluptates blanditiis molestias in suscipit, nisi nihil nulla. Dolorem pariatur ut a iste distinctio quam quos aperiam rerum nesciunt perspiciatis totam aliquid, tempora quisquam odio eum omnis expedita delectus doloremque, numquam unde iusto, voluptatibus atque? Magnam hic praesentium a ipsa provident accusantium neque eum omnis similique earum atque amet nemo doloremque, maiores, id, quidem tempore perspiciatis quos placeat! Nisi, eos. Itaque architecto pariatur earum eveniet magni, asperiores odio sint beatae delectus hic, expedita quia ipsum?</p>
-      <p className="mb-4 text-xmas-dark">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus sit dolore iste tenetur fugiat laboriosam aut eligendi a totam nostrum magnam unde ex porro odit voluptates blanditiis molestias in suscipit, nisi nihil nulla. Dolorem pariatur ut a iste distinctio quam quos aperiam rerum nesciunt perspiciatis totam aliquid, tempora quisquam odio eum omnis expedita delectus doloremque, numquam unde iusto, voluptatibus atque? Magnam hic praesentium a ipsa provident accusantium neque eum omnis similique earum atque amet nemo doloremque, maiores, id, quidem tempore perspiciatis quos placeat! Nisi, eos. Itaque architecto pariatur earum eveniet magni, asperiores odio sint beatae delectus hic, expedita quia ipsum?</p>
-      <div className="w-full aspect-[16/9] bg-blue-primary/40 flex justify-center items-center rounded-xl my-8">
-        <p>Headline Picture</p>
-      </div>
-      <p className="mb-4 text-xmas-dark">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus sit dolore iste tenetur fugiat laboriosam aut eligendi a totam nostrum magnam unde ex porro odit voluptates blanditiis molestias in suscipit, nisi nihil nulla. Dolorem pariatur ut a iste distinctio quam quos aperiam rerum nesciunt perspiciatis totam aliquid, tempora quisquam odio eum omnis expedita delectus doloremque, numquam unde iusto, voluptatibus atque? Magnam hic praesentium a ipsa provident accusantium neque eum omnis similique earum atque amet nemo doloremque, maiores, id, quidem tempore perspiciatis quos placeat! Nisi, eos. Itaque architecto pariatur earum eveniet magni, asperiores odio sint beatae delectus hic, expedita quia ipsum?</p>
+      {
+        jsonData.blocks.map((block) => {
+          if (block.type === 'paragraph') {
+            return <div key={block.id} className="mb-4 text-xmas-dark" dangerouslySetInnerHTML={{__html: block.data.text}}></div>
+          }
+          if (block.type === 'image') {
+            return (
+              <div key={block.id} className="my-8">
+                <div className="relative w-full aspect-[16/9] rounded-xl my-2 overflow-hidden">
+                  <Image src={process.env.BACKEND_URL + block.data.file.url} alt={block.data.caption} fill className="object-cover" />
+                </div>
+                <p className="text-sm italic ">{block.data.caption}</p>
+              </div>
+            )
+          }
+        })
+      }
     </div>
   )
 }
 
-const ArticlePage = ({params}) => {
+const ArticlePage = async ({params}) => {
+  const param = await params
+  const slug = param.title
+  const res = await fetch(`${process.env.BACKEND_URL}/api/articles/${String(slug)}`)
+  const data = await res.json()
+  const content = data[0]
   return (
     <div className="min-h-screen">
       <div className="flex">
@@ -39,8 +55,8 @@ const ArticlePage = ({params}) => {
             </div>
           </div>
           <div className="w-full flex flex-col">
-            <div className="relative w-full h-full">
-              <Image className="object-cover" fill priority alt="" src="/assets/zaitun-preview.webp" />
+            <div className="relative w-full h-full bg-yellow-950">
+              <Image className="object-cover brightness-50" fill priority alt="" src={content.headline_img} />
             </div>
           </div>
           <div className="px-2 py-6 h-full border-r border-xmas-tertiary/20 bg-xmas-neutral flex flex-col justify-between">
@@ -69,22 +85,22 @@ const ArticlePage = ({params}) => {
               <div className="flex gap-2 items-center text-sm mb-8">
                 <Link href="/zaitun" className="text-xmas-tertiary">Beranda</Link>
                 <MdChevronRight className="text-neutral-600" />
-                <p className="text-xmas-tertiary font-semibold">{String(params.title)}</p>
+                <p className="text-xmas-tertiary font-semibold">{slug}</p>
               </div>
               <div className="mb-8">
                 <div className="pb-3 border-b border-xmas-secondary/50 flex flex-col gap-4">
-                  <h2 className="font-ibara text-xl text-xmas-tertiary font-semibold">Sub Kategori (opsional)</h2>
-                  <h1 className="text-7xl font-ibara font-semibold text-xmas-primary leading-none">Lorem Ipsum Dolor Sit Amet</h1>
+                  {/* <h2 className="font-ibara text-xl text-xmas-tertiary font-semibold">{content.category_id}</h2> */}
+                  <h1 className="text-7xl font-ibara font-semibold text-xmas-primary leading-none">{content.title}</h1>
                   <div className="flex items-center gap-2">
                     <div className="aspect-square w-8 bg-slate-300 rounded-full" />
                     <div>
-                      <p className="text-xs text-xmas-secondary font-semibold font-heading uppercase">WRITER</p>
-                      <p className="text-xs text-xmas-tertiary font-heading">19 Juni 2024</p>
+                      <p className="text-xs text-xmas-secondary font-semibold font-heading uppercase">{content.writer_name}</p>
+                      <p className="text-xs text-xmas-tertiary font-heading">{new Date(content.created_at).toLocaleDateString("id-US", {dateStyle:"long"})}</p>
                     </div>
                   </div>
                 </div>
               </div>
-              <Contents />
+              <Contents articleContent={content.content_json} />
               <div className="flex justify-between">
                 <div className="flex items-center gap-2 hover:text-blue-secondary cursor-pointer transition-colors">
                   <MdChevronLeft />

@@ -1,8 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { MdChevronRight } from "react-icons/md";
 import ContentSection from "./ContentSection";
-import { Button } from "@nextui-org/button";
 
 import { HiHome } from "react-icons/hi";
 import { FaCompass } from "react-icons/fa6";
@@ -106,11 +104,6 @@ const ZaitunPage = () => {
           <div className="w-[45%] py-10 px-4 flex-shrink-0">
             <div className="w-full max-w-prose">
               <h1 className="text-8xl font-ibara font-bold leading-tight text-xmas-primary">Zaitun Edisi Natal 2024</h1>
-              {/* <div className="flex gap-2 items-center text-sm mb-8">
-                <Link href="/" className="text-blue-secondary">Beranda</Link>
-                <MdChevronRight className="text-neutral-600" />
-                <p href="/zaitun" className="text-blue-secondary font-semibold">Zaitun</p>
-              </div> */}
               <div className="my-8">
                 <ContentSection />
               </div>
