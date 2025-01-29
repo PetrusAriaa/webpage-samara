@@ -3,32 +3,35 @@ import { Card, CardBody, CardFooter } from "@nextui-org/card";
 import Link from "next/link";
 import Image from "next/image";
 
+const slugify = (text) => 
+  text
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-') 
+    .replace(/^-+|-+$/g, '');
+
 export const PengurusItem = ({ item }) => {
     return (
-        <>
-            <Link href={`susunan-pengurus/${item.id}`}>
-                <Card
-                    shadow="sm"
-                    key={item.id}
-                    className="border rounded-md shadow-lg cursor-pointer hover:bg-black/5 "
-                >
-                    <CardBody className="overflow-visible ">
-                        <Image
-                            className="rounded-t-xl md:h-56 rounded"
-                            layout="responsive"
-                            width={16}
-                            height={9}
-                            alt={item.namaBidang}
-                            src={item.imageBidang}
-                        />
-                    </CardBody>
-                    <hr className="border-gray-300" />
-                    <CardFooter className="flex-col items-center text-left ">
-                        <b className="text-sm md:text-md lg:text-lg text-blue-secondary">{item.namaBidang}</b>
-                    </CardFooter>
-                </Card>
-            </Link>
-        </>
+        <Link href={`/susunan-pengurus/${slugify(item.namaBidang)}`}>
+            <Card
+                shadow="sm"
+                key={item.id}
+                className="border rounded-md shadow-lg cursor-pointer hover:bg-black/5"
+            >
+                <CardBody className="overflow-visible">
+                    <Image
+                        className="rounded-t-xl md:h-50 rounded"
+                        width={300} 
+                        height={290}
+                        alt={item.namaBidang}
+                        src={item.imageBidang}
+                    />
+                </CardBody>
+                <hr className="border-gray-300" />
+                <CardFooter className="flex-col items-center text-left">
+                    <b className="text-sm md:text-md lg:text-lg text-blue-secondary">{item.namaBidang}</b>
+                </CardFooter>
+            </Card>
+        </Link>
     );
 };
 
@@ -59,5 +62,5 @@ PengurusItem.propTypes = {
                 ).isRequired
             })
         ).isRequired
-    })
+    }).isRequired
 };
