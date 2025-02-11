@@ -5,6 +5,7 @@ import { FiLogOut } from "react-icons/fi";
 import { HiHome } from "react-icons/hi";
 import { MdChevronRight, MdChevronLeft } from "react-icons/md";
 import AdCarousell from "../AdCarousell";
+import { getDB } from "@/lib/db";
 
 const Contents = ({articleContent}) => {
   const jsonData = JSON.parse(articleContent)
@@ -49,9 +50,19 @@ const AdImage3 = [
 const ArticlePage = async ({params}) => {
   const param = await params
   const slug = param.title
-  const res = await fetch(`http://localhost:3000/api/articles/${String(slug)}`)
-  const data = await res.json()
-  const content = data[0]
+  let content
+  const conn = getDB()
+  try {
+    const article = await conn.query("SELECT * FROM articles WHERE slug = $1", [slug])
+    if (article.rows.length < 1) throw new Error("Article not found")
+    content = article.rows[0]
+  }
+  catch (err) {
+    console.error(err)
+    return (
+      <div>Error</div>
+    )
+  }
   return (
     <div className="min-h-screen">
       <div className="flex">
