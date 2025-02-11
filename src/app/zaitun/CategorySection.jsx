@@ -23,15 +23,16 @@ const CategorySection = ({ categoryId, categoryTitle }) => {
       <h3 className="font-ibara font-medium text-2xl my-4 text-xmas-secondary">{categoryTitle}</h3>
       <div className="flex flex-col gap-4">
         {
-          contents.length > 0 &&
+          contents.length > 0 ?
           contents.map((item, i) => {
             return (
               <div key={i} className="flex items-center gap-4">
                 <Link href={`/zaitun/${item.slug}`}>
-                <div className="aspect-[4/5] w-56 overflow-hidden">
-                  <div className="relative aspect-[4/5] w-56 bg-slate-300 hover:scale-110 ease-in-out duration-500">
+                <div className="aspect-[4/5] w-56 overflow-hidden rounded-lg">
+                  <div className="relative aspect-[4/5] w-56 bg-xmas-tertiary/25 hover:scale-110 ease-in-out duration-500">
                     <Image
-                      src={'https://web-admin-eta-gray.vercel.app'+item.thumb_img}
+                      loading="lazy"
+                      src={item.thumb_img}
                       fill
                       alt=""
                       className="object-cover"
@@ -43,7 +44,7 @@ const CategorySection = ({ categoryId, categoryTitle }) => {
                   <Link href={`/zaitun/${item.slug}`}>
                     <h3 className="text-3xl font-ibara font-semibold text-xmas-primary hover:text-xmas-tertiary transition-colors">{item.title}</h3>
                   </Link>
-                  <p className="text-xmas-dark line-clamp-3">{item.paragraph}</p>
+                  <p className="text-xmas-dark line-clamp-3 mt-2">{item.thumb_text}</p>
                   <div className="flex items-center gap-2 mt-4">
                     <div className="aspect-square w-8 bg-slate-300 rounded-full" />
                     <div>
@@ -55,6 +56,17 @@ const CategorySection = ({ categoryId, categoryTitle }) => {
               </div>
             )
           })
+          :
+          [0,1,2].map((i) => {return (
+            <div key={i} className="flex gap-4">
+              <div className="w-56 aspect-[4/5] flex-shrink-0 bg-xmas-tertiary/25 rounded-lg animate-pulse" />
+              <div className="flex w-full flex-col gap-2 justify-center">
+                <div className="w-full h-10 bg-xmas-tertiary/25 rounded-lg animate-pulse" />
+                <div className="w-2/3 h-5 bg-xmas-tertiary/25 rounded-full animate-pulse" />
+                <div className="w-2/3 h-5 bg-xmas-tertiary/25 rounded-full animate-pulse" />
+              </div>
+            </div>
+          )})
         }
       </div>
     </div>

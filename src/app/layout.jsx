@@ -1,28 +1,11 @@
-// import localFont from "next/font/local"
 import { Plus_Jakarta_Sans, Karla, Ibarra_Real_Nova } from "next/font/google"
 
 import Providers from "./Providers";
 import "./globals.css";
-import InfoModal from "../components/InfoModal";
 
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 
-// export const trajan = localFont({
-//   src: [
-//     {
-//       path: './font/TrajanPro-Regular.woff2',
-//       weight: '400',
-//       style: 'normal',
-//     },
-//     {
-//       path: './font/TrajanPro-Bold.woff2',
-//       weight: '700',
-//       style: 'normal',
-//     },
-//   ],
-//   variable: "--font-trajan"
-// })
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -62,7 +45,6 @@ export default function RootLayout({ children }) {
             </div>
             <Footer />
           </div>
-          <InfoModal />
         </Providers>
       </body>
     </html>

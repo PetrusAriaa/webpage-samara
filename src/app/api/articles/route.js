@@ -8,7 +8,7 @@ export const GET = async (req, res) => {
   if (category) {
     try {
       const article = await db.query(`
-        SELECT a.id, title, slug, writer_name, created_at, thumb_img
+        SELECT a.id, title, slug, writer_name, created_at, thumb_img, a.thumb_text
         FROM articles as a
         WHERE category_id = $1`, [Number(category)])
       return NextResponse.json(article.rows)

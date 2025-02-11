@@ -49,7 +49,7 @@ const AdImage3 = [
 const ArticlePage = async ({params}) => {
   const param = await params
   const slug = param.title
-  const res = await fetch(`${process.env.BACKEND_URL}/api/articles/${String(slug)}`)
+  const res = await fetch(`http://localhost:3000/api/articles/${String(slug)}`)
   const data = await res.json()
   const content = data[0]
   return (
@@ -90,10 +90,10 @@ const ArticlePage = async ({params}) => {
         <div className="flex justify-end w-full bg-xmas-neutral">
           <div className="w-[45%] py-10 px-4 flex-shrink-0">
             <div className="w-full max-w-prose">
-              <div className="flex gap-2 items-center text-sm mb-8">
+              <div className="flex gap-2 items-center text-sm mb-8 w-1/2">
                 <Link href="/zaitun" className="text-xmas-tertiary">Beranda</Link>
-                <MdChevronRight className="text-neutral-600" />
-                <p className="text-xmas-tertiary font-semibold">{slug}</p>
+                <MdChevronRight className="text-neutral-600 flex-shrink-0"/>
+                <p className="text-xmas-tertiary font-semibold truncate">{content.title}</p>
               </div>
               <div className="mb-8">
                 <div className="pb-3 border-b border-xmas-secondary/50 flex flex-col gap-4">

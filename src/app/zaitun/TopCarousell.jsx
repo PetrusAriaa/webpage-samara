@@ -1,13 +1,14 @@
 'use client'
 
 import { Button } from "@nextui-org/button"
-import {useState, useRef} from "react"
+import {useState, useRef, useEffect} from "react"
 import { SwiperSlide, Swiper } from "swiper/react"
 import { Autoplay } from 'swiper/modules'
 import Image from "next/image"
 
 import 'swiper/css'
 import Link from "next/link"
+import { getTopArticles } from "@/actions/articles"
 
 const TOP_DATA = [
   {
@@ -36,7 +37,16 @@ const TOP_DATA = [
   },
 ]
 
+const getTopArticle = async (callback) => {
+  const articleData = await getTopArticles()
+  callback(articleData)
+}
+
 const TopCarousell = () => {
+  const [topArticles, setTopArticles] = useState([])
+  useEffect(()=> {
+    getTopArticle(setTopArticles)
+  }, [])
   const [currentNews, setCurrentNews] = useState(0)
   const swiperRef = useRef()
 
@@ -60,75 +70,138 @@ const TopCarousell = () => {
         <Button onPress={slidePrev} isIconOnly variant="ghost" color="primary" radius="full">{"<"}</Button>
         <Button onPress={slideNext} isIconOnly variant="ghost" color="primary" radius="full">{">"}</Button>
       </div>
-      <div className="w-full relative z-0">
-        <Swiper
-          autoplay={{
-            delay: 2500,
-            disableOnInteraction: false,
-          }}
-          modules={[Autoplay]}
-          ref={swiperRef}
-          slidesPerView={1}
-          onSlideChange={handleSlideChange}
-        >
-          {
-            TOP_DATA.map((item, i) => {
-              return (
-                <SwiperSlide key={i}>
-                  <Link href={`/zaitun/${item.slug}`}>
-                    <div className="relative w-full aspect-square">
-                      <Image
-                        src={item.imgSrc}
-                        alt=""
-                        fill
-                        className="object-cover"
+
+      {
+        topArticles.length > 0 ?
+        (
+          <div className="w-full relative z-0">
+            <Swiper
+              autoplay={{
+                delay: 2500,
+                disableOnInteraction: false,
+              }}
+              modules={[Autoplay]}
+              ref={swiperRef}
+              slidesPerView={1}
+              onSlideChange={handleSlideChange}
+            >
+              {
+                topArticles.map((item, i) => {
+                  return (
+                    <SwiperSlide key={i}>
+                      <Link href={`/zaitun/${item.slug}`}>
+                        <div className="relative w-full aspect-square bg-xmas-tertiary/25">
+                          <Image
+                            src={item.thumb_img}
+                            alt=""
+                            fill
+                            className="object-cover"
+                            />
+                        </div>
+                      </Link>
+                    </SwiperSlide>
+                  )
+                })
+              }
+            </Swiper>
+          </div>
+        ):
+        (
+          <div className="w-full relative z-0">
+            <Swiper
+              autoplay={{
+                delay: 2500,
+                disableOnInteraction: false,
+              }}
+              modules={[Autoplay]}
+              ref={swiperRef}
+              slidesPerView={1}
+              onSlideChange={handleSlideChange}
+            >
+              {
+                [0, 1, 2].map((i) => {
+                  return (
+                    <SwiperSlide key={i}>
+                      <div className="relative w-full aspect-square bg-xmas-tertiary/25" />
+                    </SwiperSlide>
+                  )
+                })
+              }
+            </Swiper>
+          </div>
+        )
+      }
+
+      {
+        topArticles.length > 0 ?
+        (
+          <div className="grid grid-cols-3 gap-4 mt-4">
+            {
+              topArticles.map((item, i) => {
+                return (
+                  <div key={i} className={
+                    (currentNews === i ? "-translate-y-3 " : "translate-y-0 ") +
+                    " flex flex-col gap-2 transition-transform duration-400"
+                    }>
+                    <Link href={`/zaitun/${item.slug}`}>
+                      <div className={
+                        (currentNews === i ? "shadow-lg " : "shadow-none ") +
+                        " relative w-full aspect-square bg-xmas-tertiary/25 transition-shadow rounded-lg overflow-hidden"}>
+                        <Image
+                          src={item.thumb_img}
+                          alt=""
+                          fill
+                          className="object-cover"
                         />
+                      </div>
+                    </Link>
+                    <Link href={`/zaitun/${item.slug}`}>
+                      <h3 className="text-xl font-ibara font-medium text-xmas-primary">{item.title}</h3>
+                    </Link>
+                    <div className="flex items-center gap-2">
+                      <div className="aspect-square w-8 bg-slate-300 rounded-full" />
+                      <div>
+                        <p className="text-xs text-xmas-secondary uppercase">{item.writer_name}</p>
+                        <p className="text-xs text-xmas-tertiary">{new Date(item.created_at).toLocaleDateString('id-US', {
+                          dateStyle: 'long'
+                        })}</p>
+                      </div>
                     </div>
-                    {/* <div className="w-full aspect-square bg-slate-300 flex justify-center items-center">
-                      Artikel {item}
-                    </div> */}
-                  </Link>
-                </SwiperSlide>
-              )
-            })
-          }
-        </Swiper>
-      </div>
-      <div className="grid grid-cols-3 gap-4 mt-4">
-        {
-          TOP_DATA.map((item, i) => {
-            return (
-              <div key={i} className={
-                (currentNews === i ? "-translate-y-3 " : "translate-y-0 ") +
-                " flex flex-col gap-2 transition-transform duration-400"
-                }>
-                <Link href={`/zaitun/${item.slug}`}>
-                  <div className={
-                    (currentNews === i ? "shadow-lg " : "shadow-none ") +
-                    " relative w-full aspect-square  bg-slate-200 transition-shadow"}>
-                    <Image
-                      src={item.imgSrc}
-                      alt=""
-                      fill
-                      className="object-cover"
-                    />
                   </div>
-                </Link>
-                <Link href={`/zaitun/${item.slug}`}>
-                  <h3 className="text-xl font-ibara font-medium text-xmas-primary">{item.title}</h3>
-                </Link>
-                <div className="flex items-center gap-2">
-                  <div className="aspect-square w-8 bg-slate-300 rounded-full" />
-                  <div>
-                    <p className="text-xs text-xmas-secondary uppercase">{item.writer}</p>
-                    <p className="text-xs text-xmas-tertiary">{item.publishedDate}</p>
+                )
+              })
+            }
+          </div>
+        )
+        :
+        (
+          <div className="grid grid-cols-3 gap-4 mt-4">
+            {
+              [0,1,2].map((i) => {
+                return (
+                  <div key={i} className={
+                    (currentNews === i ? "-translate-y-3 " : "translate-y-0 ") +
+                    " flex flex-col gap-2 transition-transform duration-400"
+                    }>
+                      <div className={
+                        (currentNews === i ? "shadow-lg " : "shadow-none ") +
+                        " relative w-full aspect-square bg-xmas-tertiary/25 transition-shadow rounded-lg"}>
+                      </div>
+                      <div className="bg-xmas-tertiary/25 w-full h-8 rounded-full animate-pulse" />
+                    <div className="flex items-center gap-2">
+                      <div className="aspect-square w-8 bg-xmas-tertiary/25 rounded-full flex-shrink-0" />
+                      <div className="flex flex-col gap-2 w-1/3">
+                        <div className="bg-xmas-tertiary/25 w-full h-3 rounded-full animate-pulse" />
+                        <div className="bg-xmas-tertiary/25 w-full h-2 rounded-full animate-pulse" />
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-            )
-          })
-        }
-      </div>
+                )
+              })
+            }
+          </div>
+        )
+      }
     </div>
   )
 }
