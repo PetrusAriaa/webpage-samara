@@ -51,7 +51,7 @@ const BidangPengurus = () => {
 
 
   if (!bidang || bidang.length === 0) {
-    return <div>Belum menginput data pengurus</div>; 
+    return <div> </div>; 
   }
   
 

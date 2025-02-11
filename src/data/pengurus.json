@@ -1,119 +1,164 @@
 [
     {
         "id": 1,
-        "namaBidang": "Bidang Peribadatan",
+        "namaBidang": "Dewan Paroki Harian",
         "imageBidang": "/assets/dummy.jpg",
         "penguruss": [
             {
                 "koorBidang":[
-                    { "namaKoorBidang": "Vincentius Paulus Handrianto","jabatanKoorBidang": "Dewan Pendamping Bidang" },
-                    { "namaKoorBidang": "Kasimirus Indrawan", "jabatanKoorBidang": "Sekretaris" },
-                    { "namaKoorBidang": "Maria Caecilia Sriyanti Witana", "jabatanKoorBidang": "Dewan Pendamping Bidang" }
+                    { "namaKoorBidang": "A. Yus Noron, Pr","jabatanKoorBidang": "Pastor Kepala Paroki" },
+                    { "namaKoorBidang": "Patrick Slamet Widodo","jabatanKoorBidang": "Pastor Rekan" },
+                    { "namaKoorBidang": "Johanes Hendrie Aripin","jabatanKoorBidang": "Wakil Ketua 1" },
+                    { "namaKoorBidang": "Benedictus Hendry Sarwono","jabatanKoorBidang": "Wakil Ketua 2" },
+                    { "namaKoorBidang": "Luisa Dona Amelia Pramana","jabatanKoorBidang": "Sekretaris 1" },
+                    { "namaKoorBidang": "Teresa Soiron Inge","jabatanKoorBidang": "Sekretaris 2" },
+                    { "namaKoorBidang": "Laurentius Dede Kurniawan Wachjudi","jabatanKoorBidang": "Bendahara 1" },
+                    { "namaKoorBidang": "Paulin Eva Yuliana","jabatanKoorBidang": "Bendahara 2" }
                 ],
                 "image": "/assets/dummy.jpg",
                 "seksi": [
                     {
-                        "namaSeksi": "SEKSI PUTRA PUTRI ALTAR",
+                        "namaSeksi": "Bidang Peribadatan",
                         "seksiDetail": [
-                            { "nama": "Josephine Clara Felicia", "jabatan": "Ketua" }
+                            { "nama": "Herybertus Budiyanto Delima", "jabatan": "Korbid Peribadatan" }
                         ]
                     },
                     {
-                        "namaSeksi": "SEKSI PRODIAKON", 
+                        "namaSeksi": "Bidang Perwartaan", 
                         "seksiDetail": [
-                            { "nama": "Andreas Rudy Hadi", "jabatan": "Ketua" }
+                            { "nama": "Klara Yanti Suryat", "jabatan": "Korbid Perwartaan" }
                         ]
                     },
                     {
-                        "namaSeksi": "SEKSI PADUAN SUARA, DIRIGEN, ORGANIS (PASDIOR)",
+                        "namaSeksi": "Bidang Pelayanan", 
                         "seksiDetail": [
-                            { "nama": "Vincentius Wahyu Widodo", "jabatan": "Ketua" }
+                            { "nama": "Ignatius Susilo Santoso", "jabatan": "Korbid Pelayanan" }
                         ]
                     },
                     {
-                        "namaSeksi": "SEKSI PERAYAAN",
+                        "namaSeksi": "Bidang Persekutuan", 
                         "seksiDetail": [
-                            { "nama": "Benedictus Hendry (Alun)", "jabatan": "Ketua" }
+                            { "nama": "Franciscus Xaverius Prasetyoadi", "jabatan": "Korbid Persekutuan" }
                         ]
                     },
                     {
-                        "namaSeksi": "SEKSI PEMAZMUR",
+                        "namaSeksi": "Bidang Kesaksian", 
                         "seksiDetail": [
-                            { "nama": "Imelda Melliani Sutopo", "jabatan": "Ketua" }
+                            { "nama": "Ignatius Parwono", "jabatan": "Korbid Kesaksian" }
                         ]
                     },
                     {
-                        "namaSeksi": "SEKSI TATA LAKSANA",
+                        "namaSeksi": "Bidang Pelatihan & Pengembangan Paroki", 
                         "seksiDetail": [
-                            { "nama": "Ignasius Kevin Khinardy Liauw", "jabatan": "Ketua 1" },
-                            { "nama": "Johanes Hardy", "jabatan": "Ketua 2" }
+                            { "nama": "Stefanus Dharmadi Layarda Lay", "jabatan": "Korbid Pelatihan & Pengembangan Paroki" }
                         ]
                     },
                     {
-                        "namaSeksi": "SEKSI DEKORASI",
+                        "namaSeksi": "Bidang Perencanaan & Evaluasi", 
                         "seksiDetail": [
-                            { "nama": "drg. Gabriella Frederika Widjaja H.", "jabatan": "Ketua" }
+                            { "nama": "Krisantus Ricky Prakarsa", "jabatan": "Korbid Perencanaan & Evaluasi 1"},
+                            { "nama": "Stephanus Malviano Gunawan", "jabatan": "Korbid Perencanaan & Evaluasi 2" }
                         ]
                     },
                     {
-                        "namaSeksi": "SEKSI LEKTOR/IS",
+                        "namaSeksi": "Bidang Teritorial", 
                         "seksiDetail": [
-                            { "nama": "Maria Elisabeth Tamara Geuther", "jabatan": "Ketua 1" },
-                            { "nama": "M. M. Patricia Trimiwati Karwita", "jabatan": "Ketua 2" }
+                            { "nama": "Antonius Rudy Gunawan", "jabatan": "Korbid Teritorial" }
                         ]
                     },
                     {
-                        "namaSeksi": "SEKSI PARAMENTA",
+                        "namaSeksi": "Bidang Kategorial", 
                         "seksiDetail": [
-                            { "nama": "Elisabeth Hernajati Sutanto (Iin)", "jabatan": "Ketua" }
+                            { "nama": "Maria Then Nie", "jabatan": "Korbid Kategorial" }
                         ]
                     },
                     {
-                        "namaSeksi": "SEKSI MULTIMEDIA DAN SOUND SYSTEM",
+                        "namaSeksi": "Bidang Kepemudaan", 
                         "seksiDetail": [
-                            { "nama": "Joannes Sudirgo", "jabatan": "Ketua" }
+                            { "nama": "Cecilia Prishella", "jabatan": "Korbid Kepemudaan 1" },
+                            { "nama": "Maria Myra Medianti", "jabatan": "Korbid Kepemudaan 2" }
                         ]
                     }
                 ]
             }
         ]
     },
-
+    
     {
         "id": 2,
-        "namaBidang": "Bidang Pelayanan",
+        "namaBidang": "Bidang Peribadatan",
         "imageBidang": "/assets/dummy.jpg",
         "penguruss": [
             {
                 "koorBidang":[
-                    { "namaKoorBidang": "Cecilia Novalasa Bungakarna","jabatanKoorBidang": "Dewan Pendamping Bidang" },
-                    { "namaKoorBidang": "Steve Joseph Tirtajaya","jabatanKoorBidang": "Dewan Pendamping Bidang" }
+                    { "namaKoorBidang": "Herybertus Budiyanto Delima","jabatanKoorBidang": "Koordinator Bidang Peribadatan" }
                 ],
                 "image": "/assets/dummy.jpg",
                 "seksi": [
                     {
-                        "namaSeksi": "SEKSI KESEHATAN",
+                        "namaSeksi": "SEKSI LITURGI",
                         "seksiDetail": [
-                            { "nama": "dr. Damianus Kurniadi Harson", "jabatan": "Ketua 1" },
-                            { "nama": "dr. Maria Inria Chandra", "jabatan": "Ketua 2" }
+                            { "nama": "Gerarda Maria Kiswolini" }
                         ]
                     },
                     {
-                        "namaSeksi": "SEKSI PELAYANAN SOSIAL EKONOMI", 
+                        "namaSeksi": "SUB SEKSI PRODIAKON",
                         "seksiDetail": [
-                            { "nama": "Leonardus Julianto", "jabatan": "Ketua" }
+                            { "nama": "Antonius Andy Hartono" }
                         ]
                     },
                     {
-                        "namaSeksi": "SEKSI PENDIDIKAN",
+                        "namaSeksi": "SUB SEKSI LEKTOR",
                         "seksiDetail": [
-                            { "nama": "Yohanes Leonardo Marino", "jabatan": "Ketua" }
+                            { "nama": "Mathias Dani" }
                         ]
                     },
                     {
-                        "namaSeksi": "TEAM BERKHAT SANTO YUSUF (BKSY)",
+                        "namaSeksi": "SUB SEKSI PEMAZMUR",
                         "seksiDetail": [
-                            { "nama": "Agustinus Djohan Djapari", "jabatan": "Ketua" }
+                            { "nama": "Roswita Desi Enita" }
+                        ]
+                    },
+                    {
+                        "namaSeksi": "SUB SEKSI PASDIOR",
+                        "seksiDetail": [
+                            { "nama": "Crescentia Maria Andjar Ekawati" }
+                        ]
+                    },
+                    {
+                        "namaSeksi": "SUB SEKSI MISDINAR",
+                        "seksiDetail": [
+                            { "nama": "Stevanus Ferdinan" }
+                        ]
+                    },
+                    {
+                        "namaSeksi": "SUB SEKSI TATA LAKSANA",
+                        "seksiDetail": [
+                            { "nama": "Petrus Hengky" }
+                        ]
+                    },
+                    {
+                        "namaSeksi": "SUB SEKSI DEKORASI GEREJA",
+                        "seksiDetail": [
+                            { "nama": "Elisabeth Tinawati Lukito" }
+                        ]
+                    },
+                    {
+                        "namaSeksi": "SUB SEKSI PARAMENTA",
+                        "seksiDetail": [
+                            { "nama": "Florence Natalina" }
+                        ]
+                    },
+                    {
+                        "namaSeksi": "SUB SEKSI MULTIMEDIA & SOUNDSYSTEM",
+                        "seksiDetail": [
+                            { "nama": "Felix Ferdinand" }
+                        ]
+                    },
+                    {
+                        "namaSeksi": "SUB SEKSI TATA GERAK PERKAWINAN",
+                        "seksiDetail": [
+                            { "nama": "Imelda Nely Taslim" }
                         ]
                     }
                 ]
@@ -128,57 +173,74 @@
         "penguruss": [
             {
                 "koorBidang":[
-                    { "namaKoorBidang": "Henricus Budi Pratomo Sudibyo","jabatanKoorBidang": "Dewan Pendamping Bidang" },
-                    { "namaKoorBidang": "Alfonsus Ryan Sebastian","jabatanKoorBidang": "Dewan Pendamping Bidang" }
+                    { "namaKoorBidang": "Klara Yanti Suryat","jabatanKoorBidang": "Koordinator Bidang Perwartaan" }
                 ],
                 "image": "/assets/dummy.jpg",
                 "seksi": [
                     {
-                        "namaSeksi": "SEKSI BAPTIS BAYI",
+                        "namaSeksi": "SEKSI KATEKESE",
                         "seksiDetail": [
-                            { "nama": "Maria Brigitta Anna Kisno", "jabatan": "Ketua" }
+                            { "nama": "Henricus Budi Pratomo Sudibyo"}
                         ]
                     },
                     {
-                        "namaSeksi": "SEKSI KATEKUMENAT DEWASA", 
+                        "namaSeksi": "SUB SEKSI KATEKUMENAT",
                         "seksiDetail": [
-                            { "nama": "Joseph Michael Wibawa", "jabatan": "Ketua" }
+                            { "nama": "Gregorius Eddy Soemady"}
                         ]
                     },
                     {
-                        "namaSeksi": "SEKSI KOMUNI PERTAMA",
+                        "namaSeksi": "SUB SEKSI BAPLITA",
                         "seksiDetail": [
-                            { "nama": "Angelina Meifiani Librianty", "jabatan": "Ketua" }
+                            { "nama": "Anastasia Lim"}
                         ]
                     },
                     {
-                        "namaSeksi": "SEKSI PENGUATAN (KRISMA)",
+                        "namaSeksi": "SUB SEKSI KRISMA",
                         "seksiDetail": [
-                            { "nama": "Michael Harryanto Hardjosutirto", "jabatan": "Ketua" }
+                            { "nama": "Vincencia Severina Mariati Gunadi"}
                         ]
                     },
                     {
-                        "namaSeksi": "SEKSI BINA IMAN ANAK",
+                        "namaSeksi": "SUB SEKSI KOMUNI PERTAMA",
                         "seksiDetail": [
-                            { "nama": "Yohanes Christian Aditjakra", "jabatan": "Ketua" }
+                            { "nama": "Maria Fransiska Meliany"}
                         ]
                     },
                     {
-                        "namaSeksi": "SEKSI BINA IMAN REMAJA",
+                        "namaSeksi": "SUB SEKSI BIR",
                         "seksiDetail": [
-                            { "nama": "Christine Rusmeiry", "jabatan": "Ketua" }
+                            { "nama": "Petrus Leovando Sutanto"}
                         ]
                     },
                     {
-                        "namaSeksi": "SEKSI KERASULAN KITAB SUCI",
+                        "namaSeksi": "SUB SEKSI BIA",
                         "seksiDetail": [
-                            { "nama": "Fransiskus Billy Prakarsa", "jabatan": "Ketua" }
+                            { "nama": "Valencia Elden C."}
                         ]
                     },
                     {
-                        "namaSeksi": "SEKSI KOMUNIKASI SOSIAL (KOMSOS)",
+                        "namaSeksi": "SUB SEKSI EJ",
                         "seksiDetail": [
-                            { "nama": "Antonius Anthony Leonard", "jabatan": "Ketua" }
+                            { "nama": "Lukas Hadrianz Reydy Japaris"}
+                        ]
+                    },
+                    {
+                        "namaSeksi": "SEKSI KERASULAN KITAB SUCI (KKS)",
+                        "seksiDetail": [
+                            { "nama": "Stefanie Adityavarna"}
+                        ]
+                    },
+                    {
+                        "namaSeksi": "SEKSI KOMSOS",
+                        "seksiDetail": [
+                            { "nama": "Yoseph Sonny Sutanto"}
+                        ]
+                    },
+                    {
+                        "namaSeksi": "SUB SEKSI KOMSOS KEP",
+                        "seksiDetail": [
+                            { "nama": "Adrianus Atu Odja"}
                         ]
                     }
                 ]
@@ -188,81 +250,70 @@
 
     {
         "id": 4,
-        "namaBidang": "Bidang Persekutuan",
+        "namaBidang": "Bidang Pelayanan",
         "imageBidang": "/assets/dummy.jpg",
         "penguruss": [
             {
                 "koorBidang":[
-                    { "namaKoorBidang": "Stefanus Jeffry Yamin","jabatanKoorBidang": "Dewan Pendamping Bidang" }
+                    { "namaKoorBidang": "Ignatius Susilo Santoso","jabatanKoorBidang": "Koordinator Bidang Pelayanan" }
                 ],
                 "image": "/assets/dummy.jpg",
                 "seksi": [
                     {
-                        "namaSeksi": "PERSEKUTUAN DOA KARISMATIK KATHOLIK",
+                        "namaSeksi": "SEKSI PSE",
                         "seksiDetail": [
-                            { "nama": "Fransiska Yenni", "jabatan": "Ketua" }
+                            { "nama": "Yulius Riyan"}
                         ]
                     },
                     {
-                        "namaSeksi": "PERSEKUTUAN DOA ORANG MUDA PEMBAHARUAN KARISMATIK KATOLIK", 
+                        "namaSeksi": "SEKSI KESEHATAN",
                         "seksiDetail": [
-                            { "nama": "Kristoforus Elbert Lukman", "jabatan": "Ketua" }
+                            { "nama": "Paulina Maria Purnamawati" }
                         ]
                     },
                     {
-                        "namaSeksi": "LEGIO MARIA",
+                        "namaSeksi": "SEKSI PENDIDIKAN",
                         "seksiDetail": [
-                            { "nama": "Vinsensius Pauli Wiguna", "jabatan": "Ketua" }
+                            { "nama": "Maria Erika Ambarita" }
                         ]
                     },
                     {
-                        "namaSeksi": "KOMUNITAS LANSIA",
+                        "namaSeksi": "TIM TABUT",
                         "seksiDetail": [
-                            { "nama": "Stephanus Hikmat Widjaja", "jabatan": "Ketua" }
+                            { "nama": "Cecilia Novalasa Bungakarna" }
                         ]
                     },
                     {
-                        "namaSeksi": "WANITA KATOLIK",
+                        "namaSeksi": "TIM BSKY",
                         "seksiDetail": [
-                            { "nama": "Clara Debby Agustina", "jabatan": "Ketua" }
+                            { "nama": "Yonas Andi Robi" }
                         ]
                     },
                     {
-                        "namaSeksi": "ORANG MUDA KATOLIK",
+                        "namaSeksi": "TIM KEDUKAAN",
                         "seksiDetail": [
-                            { "nama": "Stefanus Stefan Jonathan", "jabatan": "Ketua" }
+                            { "nama": "Elisabeth Hernajati Sutanto" }
                         ]
                     },
                     {
-                        "namaSeksi": "EMMAUS JOURNEY (EJ)",
+                        "namaSeksi": "TIM ASAK",
                         "seksiDetail": [
-                            { "nama": "Fransiskus Xaverius Sandi Susanto", "jabatan": "Ketua" }
+                            { "nama": "Ellijani Djatnika" }
                         ]
                     },
                     {
-                        "namaSeksi": "PERHIMPUNAN WARAKAWURI KATOLIK (PWK) SANTA MONIKA",
+                        "namaSeksi": "TIM SABUK",
                         "seksiDetail": [
-                            { "nama": "Caecilia Theresia Seri Dewi", "jabatan": "Ketua" }
+                            { "nama": "Nikolas Ho Budianto" }
                         ]
                     },
                     {
-                        "namaSeksi": "MARRIAGE ENCOUNTER",
+                        "namaSeksi": "TIM AYO KERJA",
                         "seksiDetail": [
-                            { "nama": "Agustinus Rivan Rejadi dan Aurelia Pauline Ekasanty", "jabatan": "Ketua" }
-                        ]
-                    },
-                    {
-                        "namaSeksi": "SEKSI PANGGILAN HIDUP",
-                        "seksiDetail": [
-                            { "nama": "Fransiskus Budi Wijaya", "jabatan": "Ketua" }
-                        ]
-                    },
-                    {
-                        "namaSeksi": "SEKSI KERASULAN KELUARGA DAN PASUTRI",
-                        "seksiDetail": [
-                            { "nama": "Paulus Kumala - Melanie Lie", "jabatan": "Ketua" }
+                            { "nama": "Elisabeth Chandra Susanty" }
                         ]
                     }
+                    
                 ]
             }
         ]
@@ -270,38 +321,26 @@
 
     {
         "id": 5,
-        "namaBidang": "Bidang Kesaksian",
+        "namaBidang": "Bidang Persekutuan",
         "imageBidang": "/assets/dummy.jpg",
         "penguruss": [
             {
                 "koorBidang":[
-                    { "namaKoorBidang": "Ign. Benedictus Yacob Chandra","jabatanKoorBidang": "Dewan Pendamping Bidang" }
+                    { "namaKoorBidang": "Franciscus Xaverius Prasetyoadi","jabatanKoorBidang": "Koordinator Bidang Persekutuan" }
                 ],
                 "image": "/assets/dummy.jpg",
                 "seksi": [
                     {
-                        "namaSeksi": "SEKSI LINGKUNGAN HIDUP",
+                        "namaSeksi": "SEKSI PANGGILAN",
                         "seksiDetail": [
-                            { "nama": "Mathilda Lilya Winny Febriyanti", "jabatan": "Ketua" }
+                            { "nama": "Paulus Paryatin"}
                         ]
                     },
                     {
-                        "namaSeksi": "SEKSI ADVOKASI", 
+                        "namaSeksi": "SEKSI KERASULAN KELUARGA", 
                         "seksiDetail": [
-                            { "nama": "Christoforus Suhadi, SH, MH.", "jabatan": "Ketua 1" },
-                            { "nama": "Bernadus Galuh Elnanda Cahyadi, SH", "jabatan": "Ketua 2" }
-                        ]
-                    },
-                    {
-                        "namaSeksi": "SEKSI HUBUNGAN ANTAR AGAMA DAN KEMASYARAKATAN (HAAK)",
-                        "seksiDetail": [
-                            { "nama": "Ignatius Hidayat Gosali", "jabatan": "Ketua" }
-                        ]
-                    },
-                    {
-                        "namaSeksi": "TEAM BANK SAMPAH",
-                        "seksiDetail": [
-                            { "nama": "Wilhelm Iwan Purnama", "jabatan": "Ketua" }
+                            { "nama": "Antonius Fredy Tanuwidjaja"},
+                            { "nama": "Agatha Maria Debbie Tjandra"}
                         ]
                     }
                 ]
@@ -311,60 +350,218 @@
 
     {
         "id": 6,
-        "namaBidang": "Bidang Pelatihan dan Pengembangan Paroki",
+        "namaBidang": "Bidang Kesaksian",
         "imageBidang": "/assets/dummy.jpg",
         "penguruss": [
             {
                 "koorBidang":[
-                    { "namaKoorBidang": "Michael Andreas Isman Djanitra","jabatanKoorBidang": "Dewan Pendamping Bidang" },
-                    { "namaKoorBidang": "Basilius Endra Nugroho","jabatanKoorBidang": "Dewan Pendamping Bidang" }
+                    { "namaKoorBidang": "Ignatius Parwono","jabatanKoorBidang": "Koordinator Bidang Kesaksian" }
                 ],
                 "image": "/assets/dummy.jpg",
                 "seksi": [
                     {
-                        "namaSeksi": "SEKSI PENELITIAN DAN PENGEMBANGAN",
+                        "namaSeksi": "SEKSI KEADILAN PERDAMAIAN",
                         "seksiDetail": [
-                            { "nama": "Antonius Eric Adiwijaya", "jabatan": "Ketua" }
+                            { "nama": "Wilhelm Iwan Purnama"}
                         ]
                     },
                     {
-                        "namaSeksi": "SEKSI KADERISASI", 
+                        "namaSeksi": "SUB SEKSI ADVOKASI", 
                         "seksiDetail": [
-                            { "nama": "Ignatius Toni Dinoto", "jabatan": "Ketua" }
+                            { "nama": "Bernadus Galuh Elnanda Cahyadi"}
+                        ]
+                    },
+                    {
+                        "namaSeksi": "TIM BANK SAMARA",
+                        "seksiDetail": [
+                            { "nama": "Ign. Benedictus Yacob Chandra"}
+                        ]
+                    },
+                    {
+                        "namaSeksi": "SEKSI HAAK",
+                        "seksiDetail": [
+                            { "nama": "Johanes Hardi"}
                         ]
                     }
                 ]
             }
         ]
     },
+
     {
         "id": 7,
-        "namaBidang": "Dewan Paroki Harian",
+        "namaBidang": "Bidang Pelatihan dan Pengembangan Paroki",
         "imageBidang": "/assets/dummy.jpg",
         "penguruss": [
             {
                 "koorBidang":[
-                    { "namaKoorBidang": "Michael Wisnu Agung P., Pr","jabatanKoorBidang": "Pastor Kepala Paroki" },
-                    { "namaKoorBidang": "Albertus Monang R.S., Pr","jabatanKoorBidang": "Pastor Rekan" },
-                    { "namaKoorBidang": "Lambertus Benny Taslim","jabatanKoorBidang": "Wakil Ketua 1" },
-                    { "namaKoorBidang": "Bernardus Suprapto","jabatanKoorBidang": "Wakil Ketua 2" },
-                    { "namaKoorBidang": "Maria M. Yap Siauw Giok","jabatanKoorBidang": "Sekretaris 1" },
-                    { "namaKoorBidang": "Justina Maria Gozali","jabatanKoorBidang": "Sekretaris 2" },
-                    { "namaKoorBidang": "Thomas Antonio Ricardo Tjhie","jabatanKoorBidang": "Bendahara 1" },
-                    { "namaKoorBidang": "Catharina Hendrijani Tjondro","jabatanKoorBidang": "Bendahara 2" }
+                    { "namaKoorBidang": "Stefanus Dharmadi Layarda Lay","jabatanKoorBidang": "Koordinator Bidang Pelatihan & Pengembangan Paroki" }
                 ],
                 "image": "/assets/dummy.jpg",
                 "seksi": [
                     {
                         "namaSeksi": "SEKSI PENELITIAN DAN PENGEMBANGAN",
                         "seksiDetail": [
-                            { "nama": "Antonius Eric Adiwijaya", "jabatan": "Ketua" }
+                            { "nama": "Antonius Eric Adiwijaya"}
                         ]
                     },
                     {
-                        "namaSeksi": "SEKSI KADERISASI", 
+                        "namaSeksi": "SEKSI PELATIHAN & PENGKADERAN", 
                         "seksiDetail": [
-                            { "nama": "Ignatius Toni Dinoto", "jabatan": "Ketua" }
+                            { "nama": "Basilius Endra Nugroho"}
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+
+    {
+        "id": 8,
+        "namaBidang": "Bidang Kategorial",
+        "imageBidang": "/assets/dummy.jpg",
+        "penguruss": [
+            {
+                "koorBidang":[
+                    { "namaKoorBidang": "Maria Then Nie","jabatanKoorBidang": "Koordinator Bidang Kategorial" }
+                ],
+                "image": "/assets/dummy.jpg",
+                "seksi": [
+                    {
+                        "namaSeksi": "LEGIO MARIAE",
+                        "seksiDetail": [
+                            { "nama": "Katherin Gondo Sari"}
+                        ]
+                    },
+                    {
+                        "namaSeksi": "PDPKK", 
+                        "seksiDetail": [
+                            { "nama": "Sim Stevanus Kristanto"}
+                        ]
+                    },
+                    {
+                        "namaSeksi": "PDOMPKK", 
+                        "seksiDetail": [
+                            { "nama": "Ryan Giantara"}
+                        ]
+                    },
+                    {
+                        "namaSeksi": "KOMUNITAS LANSIA", 
+                        "seksiDetail": [
+                            { "nama": "Thomas Lim"}
+                        ]
+                    },
+                    {
+                        "namaSeksi": "PWK SANTA MONICA", 
+                        "seksiDetail": [
+                            { "nama": "Catharina Diana Gunawan"}
+                        ]
+                    },
+                    {
+                        "namaSeksi": "KOMUNITAS MARRIAGE ENCOUNTER (ME)", 
+                        "seksiDetail": [
+                            { "nama": "Silvester Piter"},
+                            { "nama": "Lisa Meiliana Kurniawan"}
+                        ]
+                    },
+                    {
+                        "namaSeksi": "WANITA KATOLIK (WK)", 
+                        "seksiDetail": [
+                            { "nama": "Theresia Tresna Evalina Simanjuntak"}
+                        ]
+                    },
+                    {
+                        "namaSeksi": "KOMUNITAS KERAHIMAN ILAHI", 
+                        "seksiDetail": [
+                            { "nama": "Ferdinand Makmur Kuncorojati"}
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+
+    {
+        "id": 9,
+        "namaBidang": "Bidang Kategorial",
+        "imageBidang": "/assets/dummy.jpg",
+        "penguruss": [
+            {
+                "koorBidang":[
+                    { "namaKoorBidang": "Maria Then Nie","jabatanKoorBidang": "Koordinator Bidang Kategorial" }
+                ],
+                "image": "/assets/dummy.jpg",
+                "seksi": [
+                    {
+                        "namaSeksi": "LEGIO MARIAE",
+                        "seksiDetail": [
+                            { "nama": "Katherin Gondo Sari"}
+                        ]
+                    },
+                    {
+                        "namaSeksi": "PDPKK", 
+                        "seksiDetail": [
+                            { "nama": "Sim Stevanus Kristanto"}
+                        ]
+                    },
+                    {
+                        "namaSeksi": "PDOMPKK", 
+                        "seksiDetail": [
+                            { "nama": "Ryan Giantara"}
+                        ]
+                    },
+                    {
+                        "namaSeksi": "KOMUNITAS LANSIA", 
+                        "seksiDetail": [
+                            { "nama": "Thomas Lim"}
+                        ]
+                    },
+                    {
+                        "namaSeksi": "PWK SANTA MONICA", 
+                        "seksiDetail": [
+                            { "nama": "Catharina Diana Gunawan"}
+                        ]
+                    },
+                    {
+                        "namaSeksi": "KOMUNITAS MARRIAGE ENCOUNTER (ME)", 
+                        "seksiDetail": [
+                            { "nama": "Silvester Piter"},
+                            { "nama": "Lisa Meiliana Kurniawan"}
+                        ]
+                    },
+                    {
+                        "namaSeksi": "WANITA KATOLIK (WK)", 
+                        "seksiDetail": [
+                            { "nama": "Theresia Tresna Evalina Simanjuntak"}
+                        ]
+                    },
+                    {
+                        "namaSeksi": "KOMUNITAS KERAHIMAN ILAHI", 
+                        "seksiDetail": [
+                            { "nama": "Ferdinand Makmur Kuncorojati"}
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+
+    {
+        "id": 10,
+        "namaBidang": "Bidang Kepemudaan",
+        "imageBidang": "/assets/dummy.jpg",
+        "penguruss": [
+            {
+                "koorBidang":[
+                    { "namaKoorBidang": "Cecilia Prishella","jabatanKoorBidang": "Koordinator Bidang Kepemudaan" },
+                    { "namaKoorBidang": "Maria Myra Medianti","jabatanKoorBidang": "Koordinator Bidang Kepemudaan" }
+                ],
+                "image": "/assets/dummy.jpg",
+                "seksi": [
+                    {
+                        "namaSeksi": "SEKSI KEPEMUDAAN",
+                        "seksiDetail": [
+                            { "nama": "Bernard Rangga Wijaya"}
                         ]
                     }
                 ]

@@ -4,6 +4,12 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
+const slugify = (text) => 
+  text
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-') 
+    .replace(/^-+|-+$/g, '');
+
 export default function GaleriPage() {
     const [galeri, setGaleri] = useState([]);
 
@@ -58,7 +64,7 @@ function GaleriCard({ item }) {
     const firstImage = images[0]?.imageUrl || "/assets/default-image.png";
 
     return (
-        <Link href={`/galeri/${item.id}`} className="flex w-full ">
+        <Link href={`/galeri/${slugify(item.title)}`} className="flex w-full ">
             <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer hover:bg-black/5" >
                 <div className="relative w-full h-40 overflow-hidden rounded-t-lg">
                     <Image
