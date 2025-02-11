@@ -4,11 +4,10 @@ import { FaCompass } from "react-icons/fa";
 import { FiLogOut } from "react-icons/fi";
 import { HiHome } from "react-icons/hi";
 import { MdChevronRight, MdChevronLeft } from "react-icons/md";
+import AdCarousell from "../AdCarousell";
 
 const Contents = ({articleContent}) => {
   const jsonData = JSON.parse(articleContent)
-  console.log(jsonData.blocks)
-
   return (
     <div className="mb-20">
       {
@@ -32,6 +31,21 @@ const Contents = ({articleContent}) => {
   )
 }
 
+const AdImage1 = [
+  "https://storage.googleapis.com/zaitun-dev/ads/1.png",
+  "https://storage.googleapis.com/zaitun-dev/ads/2.png",
+]
+
+const AdImage2 = [
+  "https://storage.googleapis.com/zaitun-dev/ads/3.png",
+  "https://storage.googleapis.com/zaitun-dev/ads/4.png",
+]
+
+const AdImage3 = [
+  "https://storage.googleapis.com/zaitun-dev/ads/5.png",
+  "https://storage.googleapis.com/zaitun-dev/ads/6.png",
+]
+
 const ArticlePage = async ({params}) => {
   const param = await params
   const slug = param.title
@@ -44,15 +58,9 @@ const ArticlePage = async ({params}) => {
         <div className="h-screen w-[55%] fixed flex">
           <div className="w-[16%] min-w-[180px] flex-shrink-0 h-full bg-zinc-800 p-2">
             <p className="text-center italic text-white/50">Advertisements</p>
-            <div className="relative w-full aspect-[4/5] bg-zinc-700 rounded flex overflow-hidden mb-2">
-              <Image className="object-cover" fill priority alt="" src="/assets/ads-sample-1.png" />
-            </div>
-            <div className="relative w-full aspect-[4/5] bg-zinc-700 rounded flex overflow-hidden mb-2">
-              <Image className="object-cover" fill priority alt="" src="/assets/ads-sample-2.png" />
-            </div>
-            <div className="relative w-full aspect-[4/5] bg-zinc-700 rounded flex overflow-hidden mb-2">
-              <Image className="object-cover" fill priority alt="" src="/assets/ads-sample-3.png" />
-            </div>
+            <AdCarousell ads={AdImage1}/>
+            <AdCarousell ads={AdImage2}/>
+            <AdCarousell ads={AdImage3}/>
           </div>
           <div className="w-full flex flex-col">
             <div className="relative w-full h-full bg-yellow-950">
