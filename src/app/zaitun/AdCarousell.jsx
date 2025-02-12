@@ -6,7 +6,7 @@ import 'swiper/css/effect-fade';
 import { Autoplay, EffectFade } from 'swiper/modules'
 import Image from 'next/image';
 
-const AdCarousell = ({ads}) => {
+const AdCarousell = ({ads, onSwiperClicked, sizing}) => {
   return (
     <Swiper
       autoplay={{
@@ -20,9 +20,9 @@ const AdCarousell = ({ads}) => {
       {
         ads.map((ad, i) => {
           return (
-            <SwiperSlide key={i}>
+            <SwiperSlide key={i} onClick={() => onSwiperClicked(ad)}>
               <div className="relative w-full aspect-[4/5] bg-zinc-700 rounded flex overflow-hidden mb-2">
-                <Image className="object-cover" fill priority alt="" src={ad} />
+                <Image className="object-cover" fill priority alt="" src={ad} sizes={sizing} />
               </div>
             </SwiperSlide>
           )

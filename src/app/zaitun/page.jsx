@@ -153,9 +153,9 @@ const ZaitunPage = () => {
         <div className="h-screen w-[55%] fixed hidden md:flex">
           <div className="w-[16%] min-w-[180px] h-full bg-zinc-800 p-2 hidden lg:block">
             <p className="text-center italic text-white/50">Advertisements</p>
-            <AdCarousell ads={AdImage1}/>
-            <AdCarousell ads={AdImage2}/>
-            <AdCarousell ads={AdImage3}/>
+            <AdCarousell ads={AdImage1} onSwiperClicked={handlePopup}/>
+            <AdCarousell ads={AdImage2} onSwiperClicked={handlePopup}/>
+            <AdCarousell ads={AdImage3} onSwiperClicked={handlePopup}/>
           </div>
 
           <div className="relative w-full h-full hidden md:block bg-xmas-tertiary/25">
@@ -202,17 +202,17 @@ const ZaitunPage = () => {
                 Zaitun Edisi Natal 2024
               </h1>
               <div className="my-8">
-                <ContentSection />
+                <ContentSection openModal={handlePopup}/>
               </div>
               <div className="flex flex-row gap-2 justify-center">
                 <div className="w-[30%]">
-                  <AdCarousell ads={AdImage1}/>
+                  <AdCarousell ads={AdImage1} onSwiperClicked={handlePopup}/>
                 </div>
                 <div className="w-[30%]">
-                  <AdCarousell ads={AdImage2}/>
+                  <AdCarousell ads={AdImage2} onSwiperClicked={handlePopup}/>
                 </div>
                 <div className="w-[30%]">
-                  <AdCarousell ads={AdImage3}/>
+                  <AdCarousell ads={AdImage3} onSwiperClicked={handlePopup}/>
                 </div>
               </div>
               <Sponsors />

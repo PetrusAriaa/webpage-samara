@@ -14,7 +14,7 @@ const AdImage2 = [
   "https://storage.googleapis.com/zaitun-dev/ads/AB6.webp",
 ]
 
-const ContentSection = () => {
+const ContentSection = ({openModal}) => {
   return (
     <>
       <h1 className="text-[2rem] font-ibara font-medium text-xmas-secondary">Artikel Teratas</h1>
@@ -23,30 +23,30 @@ const ContentSection = () => {
       </div>
       <div className="flex gap-4 pr-4 lg:hidden">
         <div className="w-1/2">
-          <AdCarousell ads={AdImage1} />
+          <AdCarousell ads={AdImage1} onSwiperClicked={openModal}/>
         </div>
         <div className="w-1/2">
-          <AdCarousell ads={AdImage2} />
+          <AdCarousell ads={AdImage2} onSwiperClicked={openModal}/>
         </div>
       </div>
       <CategorySection categoryId={5} categoryTitle="Sambutan"/>
       <CategorySection categoryId={2} categoryTitle="Liputan Utama"/>
       <div className="flex gap-4 pr-4 lg:hidden mt-12">
         <div className="w-1/2">
-          <AdCarousell ads={AdImage1} />
+          <AdCarousell ads={AdImage1} onSwiperClicked={openModal}/>
         </div>
         <div className="w-1/2">
-          <AdCarousell ads={AdImage2} />
+          <AdCarousell ads={AdImage2} onSwiperClicked={openModal}/>
         </div>
       </div>
       <CategorySection categoryId={1} categoryTitle="Liputan Umum"/>
       <CategorySection categoryId={3} categoryTitle="Katekese"/>
       <div className="flex gap-4 pr-4 lg:hidden mt-12">
         <div className="w-1/2">
-          <AdCarousell ads={AdImage1} />
+          <AdCarousell ads={AdImage1} onSwiperClicked={openModal}/>
         </div>
         <div className="w-1/2">
-          <AdCarousell ads={AdImage2} />
+          <AdCarousell ads={AdImage2} onSwiperClicked={openModal}/>
         </div>
       </div>
       <CategorySection categoryId={4} categoryTitle="Tradisi dan Sejarah"/>

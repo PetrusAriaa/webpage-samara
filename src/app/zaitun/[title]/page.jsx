@@ -20,7 +20,12 @@ const Contents = ({articleContent}) => {
             return (
               <div key={block.id} className="my-8">
                 <div className="relative w-full aspect-[16/9] rounded-xl my-2 overflow-hidden">
-                  <Image src={process.env.BACKEND_URL + block.data.file.url} alt={block.data.caption} fill className="object-cover" />
+                  <Image
+                    src={block.data.file.url}
+                    alt={block.data.caption}
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    fill
+                    className="object-cover" />
                 </div>
                 <p className="text-sm italic ">{block.data.caption}</p>
               </div>
@@ -69,12 +74,18 @@ const ArticlePage = async ({params}) => {
         <div className="h-screen w-[55%] fixed hidden md:flex">
           <div className="w-[16%] min-w-[180px] flex-shrink-0 h-full bg-zinc-800 p-2">
             <p className="text-center italic text-white/50">Advertisements</p>
-            <AdCarousell ads={AdImage1}/>
-            <AdCarousell ads={AdImage2}/>
-            <AdCarousell ads={AdImage3}/>
+            <AdCarousell ads={AdImage1} sizing="(max-width: 1200px) 0vw, 20vw"/>
+            <AdCarousell ads={AdImage2} sizing="(max-width: 1200px) 0vw, 20vw"/>
+            <AdCarousell ads={AdImage3} sizing="(max-width: 1200px) 0vw, 20vw"/>
           </div>
           <div className="relative w-full h-full bg-xmas-tertiary/25">
-            <Image className="object-cover brightness-50" fill priority alt="" src={content.headline_img} />
+            <Image
+              className="object-cover brightness-50"
+              fill
+              priority
+              alt="headline image"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              src={content.headline_img} />
           </div>
           <div className="px-2 py-6 h-full border-r border-xmas-tertiary/20 bg-xmas-neutral flex flex-col justify-between">
             <div className="flex flex-col gap-2">
@@ -100,7 +111,7 @@ const ArticlePage = async ({params}) => {
           <div className="relative w-full min-h-screen md:min-h-min block md:hidden">
             <div className="absolute size-full">
               <div className="relative w-full h-screen">
-                <Image src={content.headline_img} fill priority className="object-cover brightness-50" alt="cover" />
+                <Image sizes="(max-width: 768px) 100vw, 0vw" src={content.headline_img} fill priority className="object-cover brightness-50" alt="cover" />
               </div>
             </div>
             <div className="absolute flex items-end p-4 h-full">
@@ -145,6 +156,7 @@ const ArticlePage = async ({params}) => {
                   fill
                   className="object-cover"
                   alt="ad"
+                  sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </div>
             </div>

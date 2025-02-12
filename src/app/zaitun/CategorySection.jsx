@@ -46,7 +46,15 @@ const CategorySection = ({ categoryId, categoryTitle }) => {
                   </Link>
                   <p className="text-xmas-dark line-clamp-3 mt-2">{item.thumb_text}</p>
                   <div className="flex items-center gap-2 mt-4">
-                    <div className="aspect-square w-8 bg-slate-300 rounded-full" />
+                    <div className="relative aspect-square w-8 bg-slate-300 rounded-full">
+                      <Image
+                        src="/static/avatar.webp"
+                        fill
+                        className="object-cover"
+                        alt="avatar placeholder"
+                        sizes="5vw"
+                        />
+                    </div>
                     <div>
                       <p className="text-xs text-xmas-secondary uppercase">{item.writer_name}</p>
                       <p className="text-xs text-xmas-tertiary">{new Date(item.created_at).toLocaleDateString('id-US', {dateStyle: "long"})}</p>
