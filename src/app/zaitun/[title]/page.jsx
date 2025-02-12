@@ -33,18 +33,18 @@ const Contents = ({articleContent}) => {
 }
 
 const AdImage1 = [
-  "https://storage.googleapis.com/zaitun-dev/ads/1.png",
-  "https://storage.googleapis.com/zaitun-dev/ads/2.png",
+  "https://storage.googleapis.com/zaitun-dev/ads/AB1.webp",
+  "https://storage.googleapis.com/zaitun-dev/ads/AB2.webp",
 ]
 
 const AdImage2 = [
-  "https://storage.googleapis.com/zaitun-dev/ads/3.png",
-  "https://storage.googleapis.com/zaitun-dev/ads/4.png",
+  "https://storage.googleapis.com/zaitun-dev/ads/AB3.webp",
+  "https://storage.googleapis.com/zaitun-dev/ads/AB4.webp",
 ]
 
 const AdImage3 = [
-  "https://storage.googleapis.com/zaitun-dev/ads/5.png",
-  "https://storage.googleapis.com/zaitun-dev/ads/6.png",
+  "https://storage.googleapis.com/zaitun-dev/ads/AB5.webp",
+  "https://storage.googleapis.com/zaitun-dev/ads/AB6.webp",
 ]
 
 const ArticlePage = async ({params}) => {
@@ -66,17 +66,15 @@ const ArticlePage = async ({params}) => {
   return (
     <div className="min-h-screen">
       <div className="flex">
-        <div className="h-screen w-[55%] fixed flex">
+        <div className="h-screen w-[55%] fixed hidden md:flex">
           <div className="w-[16%] min-w-[180px] flex-shrink-0 h-full bg-zinc-800 p-2">
             <p className="text-center italic text-white/50">Advertisements</p>
             <AdCarousell ads={AdImage1}/>
             <AdCarousell ads={AdImage2}/>
             <AdCarousell ads={AdImage3}/>
           </div>
-          <div className="w-full flex flex-col">
-            <div className="relative w-full h-full bg-yellow-950">
-              <Image className="object-cover brightness-50" fill priority alt="" src={content.headline_img} />
-            </div>
+          <div className="relative w-full h-full bg-xmas-tertiary/25">
+            <Image className="object-cover brightness-50" fill priority alt="" src={content.headline_img} />
           </div>
           <div className="px-2 py-6 h-full border-r border-xmas-tertiary/20 bg-xmas-neutral flex flex-col justify-between">
             <div className="flex flex-col gap-2">
@@ -98,10 +96,22 @@ const ArticlePage = async ({params}) => {
             </Link>
           </div>
         </div>
-        <div className="flex justify-end w-full bg-xmas-neutral">
-          <div className="w-[45%] py-10 px-4 flex-shrink-0">
-            <div className="w-full max-w-prose">
-              <div className="flex gap-2 items-center text-sm mb-8 w-1/2">
+        <div className="block md:flex justify-end w-full bg-xmas-neutral">
+          <div className="relative w-full min-h-screen md:min-h-min block md:hidden">
+            <div className="absolute size-full">
+              <div className="relative w-full h-screen">
+                <Image src={content.headline_img} fill priority className="object-cover brightness-50" alt="cover" />
+              </div>
+            </div>
+            <div className="absolute flex items-end p-4 h-full">
+              <h1 className="text-6xl font-ibara font-bold leading-tight text-xmas-neutral">
+                {content.title}
+              </h1>
+            </div>
+          </div>
+          <div className="w-full md:w-[45%] py-10 px-4 flex-shrink-0">
+            <div className="w-full max-w-max md:max-w-prose">
+              <div className="flex gap-2 items-center text-sm mb-8 w-full md:w-2/3 lg:w-1/2">
                 <Link href="/zaitun" className="text-xmas-tertiary">Beranda</Link>
                 <MdChevronRight className="text-neutral-600 flex-shrink-0"/>
                 <p className="text-xmas-tertiary font-semibold truncate">{content.title}</p>
@@ -109,7 +119,7 @@ const ArticlePage = async ({params}) => {
               <div className="mb-8">
                 <div className="pb-3 border-b border-xmas-secondary/50 flex flex-col gap-4">
                   {/* <h2 className="font-ibara text-xl text-xmas-tertiary font-semibold">{content.category_id}</h2> */}
-                  <h1 className="text-7xl font-ibara font-semibold text-xmas-primary leading-none">{content.title}</h1>
+                  <h1 className="text-5xl lg:text-7xl font-ibara font-semibold text-xmas-primary leading-none hidden md:block">{content.title}</h1>
                   <div className="flex items-center gap-2">
                     <div className="aspect-square w-8 bg-slate-300 rounded-full" />
                     <div>
@@ -120,7 +130,7 @@ const ArticlePage = async ({params}) => {
                 </div>
               </div>
               <Contents articleContent={content.content_json} />
-              <div className="flex justify-between">
+              {/* <div className="flex justify-between">
                 <div className="flex items-center gap-2 hover:text-blue-secondary cursor-pointer transition-colors">
                   <MdChevronLeft />
                   <p>Artikel Sebelumnya</p>
@@ -129,9 +139,13 @@ const ArticlePage = async ({params}) => {
                   <p>Artikel Selanjutnya</p>
                   <MdChevronRight />
                 </div>
-              </div>
-              <div className="w-full h-32 bg-slate-200 mt-8 flex justify-center items-center">
-                <p className="text-slate-400">1 slot iklan komersil</p>
+              </div> */}
+              <div className="relative w-full aspect-[1080/224] bg-slate-200 mt-8 flex justify-center items-center">
+                <Image src="https://storage.googleapis.com/zaitun-dev/ads/C1.webp"
+                  fill
+                  className="object-cover"
+                  alt="ad"
+                />
               </div>
             </div>
           </div>

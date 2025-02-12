@@ -21,15 +21,15 @@ const CategorySection = ({ categoryId, categoryTitle }) => {
   return (
     <div className="mt-20">
       <h3 className="font-ibara font-medium text-2xl my-4 text-xmas-secondary">{categoryTitle}</h3>
-      <div className="flex flex-col gap-4">
+      <div className="flex flex-col gap-12 lg:gap-4">
         {
           contents.length > 0 ?
           contents.map((item, i) => {
             return (
-              <div key={i} className="flex items-center gap-4">
-                <Link href={`/zaitun/${item.slug}`}>
-                <div className="aspect-[4/5] w-56 overflow-hidden rounded-lg">
-                  <div className="relative aspect-[4/5] w-56 bg-xmas-tertiary/25 hover:scale-110 ease-in-out duration-500">
+              <div key={i} className="flex flex-col lg:flex-row items-center gap-4">
+                <Link href={`/zaitun/${item.slug}`} className="w-full">
+                <div className="relative w-full lg:w-56 aspect-[5/4] lg:aspect-[4/5] overflow-hidden rounded-lg">
+                  <div className="relative w-full lg:w-56 aspect-[5/4] lg:aspect-[4/5] bg-xmas-tertiary/25 hover:scale-110 ease-in-out duration-500">
                     <Image
                       loading="lazy"
                       src={item.thumb_img}

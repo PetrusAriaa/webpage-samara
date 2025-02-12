@@ -8,6 +8,7 @@ import ContentSection from "./ContentSection";
 import { HiHome } from "react-icons/hi";
 import { FaCompass } from "react-icons/fa6";
 import { FiLogOut } from "react-icons/fi";
+import AdCarousell from "./AdCarousell";
 
 const Sponsors = () => {
 
@@ -115,6 +116,21 @@ const Sponsors = () => {
   )
 }
 
+const AdImage1 = [
+  "https://storage.googleapis.com/zaitun-dev/ads/AB1.webp",
+  "https://storage.googleapis.com/zaitun-dev/ads/AB2.webp",
+]
+
+const AdImage2 = [
+  "https://storage.googleapis.com/zaitun-dev/ads/AB3.webp",
+  "https://storage.googleapis.com/zaitun-dev/ads/AB4.webp",
+]
+
+const AdImage3 = [
+  "https://storage.googleapis.com/zaitun-dev/ads/AB5.webp",
+  "https://storage.googleapis.com/zaitun-dev/ads/AB6.webp",
+]
+
 const ZaitunPage = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
@@ -131,45 +147,22 @@ const ZaitunPage = () => {
     }
   };
 
-  const iklan_A = [
-    "https://storage.googleapis.com/zaitun-dev/ads/1.png",
-    "https://storage.googleapis.com/zaitun-dev/ads/2.png",
-    "https://storage.googleapis.com/zaitun-dev/ads/3.png",
-  ];
-
-  const iklan_B = [
-    "https://storage.googleapis.com/zaitun-dev/ads/4.png",
-    "https://storage.googleapis.com/zaitun-dev/ads/5.png",
-    "https://storage.googleapis.com/zaitun-dev/ads/6.png",
-  ];
-
   return (
     <div className="min-h-screen">
       <div className="flex">
-        <div className="h-screen w-[55%] fixed flex">
-          <div className="w-[16%] min-w-[180px] h-full bg-zinc-800 p-2">
+        <div className="h-screen w-[55%] fixed hidden md:flex">
+          <div className="w-[16%] min-w-[180px] h-full bg-zinc-800 p-2 hidden lg:block">
             <p className="text-center italic text-white/50">Advertisements</p>
-
-            {/* Iklan A */}
-            {iklan_A.map((img, index) => (
-              <div
-                key={index}
-                className="relative w-full aspect-[4/5] bg-zinc-700 rounded flex overflow-hidden mb-2 cursor-pointer"
-                onClick={() => handlePopup(img)}
-              >
-                <Image className="object-cover" fill priority alt="" src={img} />
-              </div>
-            ))}
+            <AdCarousell ads={AdImage1}/>
+            <AdCarousell ads={AdImage2}/>
+            <AdCarousell ads={AdImage3}/>
           </div>
 
-          <div className="w-full flex flex-col">
-            <div className="relative w-full h-full">
-              <Image className="object-cover" fill priority alt="" src="/assets/zaitun-preview.webp" />
-            </div>
+          <div className="relative w-full h-full hidden md:block bg-xmas-tertiary/25">
+            <Image className="object-cover" fill priority alt="" src="/assets/zaitun-preview.webp" />
           </div>
 
-          {/* Iklan B */}
-          <div className="px-2 py-6 h-full border-r border-xmas-tertiary/20 bg-xmas-neutral flex flex-col justify-between">
+          <div className="hidden md:flex px-2 py-6 h-full border-r border-xmas-tertiary/20 bg-xmas-neutral flex-col justify-between">
             <div className="flex flex-col gap-2">
               <Link href="/zaitun">
                 <div title="Beranda" className="p-2 hover:bg-xmas-tertiary/20 rounded-lg transition-colors">
@@ -190,25 +183,37 @@ const ZaitunPage = () => {
           </div>
         </div>
 
-        <div className="flex justify-end w-full bg-xmas-neutral">
-          <div className="w-[45%] py-10 px-4 flex-shrink-0">
-            <div className="w-full max-w-prose">
-              <h1 className="text-8xl font-ibara font-bold leading-tight text-xmas-primary">
+        <div className="block md:flex justify-end w-full bg-xmas-neutral">
+          <div className="relative w-full min-h-screen md:min-h-min block md:hidden">
+            <div className="absolute size-full">
+              <div className="relative w-full h-screen">
+                <Image src="/assets/zaitun-preview.webp" fill priority className="object-cover brightness-50" alt="cover" />
+              </div>
+            </div>
+            <div className="absolute flex items-end p-4 h-full">
+              <h1 className="text-8xl font-ibara font-bold leading-tight text-xmas-neutral">
+                Zaitun Edisi Natal 2024
+              </h1>
+            </div>
+          </div>
+          <div className="w-full md:w-[45%] py-10 px-4 flex-shrink-0">
+            <div className="w-full max-w-max md:max-w-prose">
+              <h1 className="hidden md:block text-6xl lg:text-8xl font-ibara font-bold leading-tight text-xmas-primary">
                 Zaitun Edisi Natal 2024
               </h1>
               <div className="my-8">
                 <ContentSection />
               </div>
-              <div className="flex gap-4 w-full justify-center items-center mb-10">
-                {iklan_B.map((img, index) => (
-                  <div
-                    key={index}
-                    className="relative w-56 aspect-[4/5] bg-slate-200 rounded-lg flex justify-center items-center cursor-pointer"
-                    onClick={() => handlePopup(img)}
-                  >
-                    <Image className="object-cover" fill priority alt="" src={img} />
-                  </div>
-                ))}
+              <div className="flex flex-row gap-2 justify-center">
+                <div className="w-[30%]">
+                  <AdCarousell ads={AdImage1}/>
+                </div>
+                <div className="w-[30%]">
+                  <AdCarousell ads={AdImage2}/>
+                </div>
+                <div className="w-[30%]">
+                  <AdCarousell ads={AdImage3}/>
+                </div>
               </div>
               <Sponsors />
             </div>
