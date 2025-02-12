@@ -3,15 +3,15 @@ import CategorySection from "./CategorySection"
 import AdCarousell from "./AdCarousell"
 
 const AdImage1 = [
-  "https://storage.googleapis.com/zaitun-dev/ads/1.png",
-  "https://storage.googleapis.com/zaitun-dev/ads/2.png",
-  "https://storage.googleapis.com/zaitun-dev/ads/3.png",
+  "https://storage.googleapis.com/zaitun-dev/ads/AB1.webp",
+  "https://storage.googleapis.com/zaitun-dev/ads/AB2.webp",
+  "https://storage.googleapis.com/zaitun-dev/ads/AB3.webp",
 ]
 
 const AdImage2 = [
-  "https://storage.googleapis.com/zaitun-dev/ads/4.png",
-  "https://storage.googleapis.com/zaitun-dev/ads/5.png",
-  "https://storage.googleapis.com/zaitun-dev/ads/6.png",
+  "https://storage.googleapis.com/zaitun-dev/ads/AB4.webp",
+  "https://storage.googleapis.com/zaitun-dev/ads/AB5.webp",
+  "https://storage.googleapis.com/zaitun-dev/ads/AB6.webp",
 ]
 
 const ContentSection = () => {
