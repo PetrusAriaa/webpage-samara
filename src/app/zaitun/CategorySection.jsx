@@ -17,7 +17,7 @@ const CategorySection = ({ categoryId, categoryTitle }) => {
   const [contents, setContents] = useState([])
   useEffect(() => {
     getArticleContent(categoryId, setContents)
-  }, [])
+  }, [categoryId])
   return (
     <div className="mt-20">
       <h3 className="font-ibara font-medium text-2xl my-4 text-xmas-secondary">{categoryTitle}</h3>
@@ -44,21 +44,10 @@ const CategorySection = ({ categoryId, categoryTitle }) => {
                   <Link href={`/zaitun/${item.slug}`}>
                     <h3 className="text-3xl font-ibara font-semibold text-xmas-primary hover:text-xmas-tertiary transition-colors">{item.title}</h3>
                   </Link>
-                  <p className="text-xmas-dark line-clamp-3 mt-2">{item.thumb_text}</p>
-                  <div className="flex items-center gap-2 mt-4">
-                    <div className="relative aspect-square w-8 bg-slate-300 rounded-full">
-                      <Image
-                        src="/static/avatar.webp"
-                        fill
-                        className="object-cover"
-                        alt="avatar placeholder"
-                        sizes="5vw"
-                        />
-                    </div>
-                    <div>
-                      <p className="text-xs text-xmas-secondary uppercase">{item.writer_name}</p>
-                      <p className="text-xs text-xmas-tertiary">{new Date(item.created_at).toLocaleDateString('id-US', {dateStyle: "long"})}</p>
-                    </div>
+                  <p className="text-xmas-dark line-clamp-3 mt-2 text-base lg:text-xl">{item.thumb_text}</p>
+                  <div className="mt-2">
+                    <p className="text-xs md:text-sm lg:text-base text-xmas-secondary uppercase">{item.writer_name}</p>
+                    <p className="text-xs md:text-sm lg:text-base text-xmas-tertiary">{new Date(item.created_at).toLocaleDateString('id-US', {dateStyle: "long"})}</p>
                   </div>
                 </div>
               </div>

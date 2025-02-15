@@ -132,15 +132,6 @@ const TopCarousell = () => {
                       <h3 className="text-xl font-ibara font-medium text-xmas-primary line-clamp-3 lg:line-clamp-none">{item.title}</h3>
                     </Link>
                     <div className="flex items-center gap-2">
-                      <div className="relative aspect-square w-8 bg-slate-300 rounded-full">
-                        <Image
-                          src="/static/avatar.webp"
-                          fill
-                          className="object-cover"
-                          alt="avatar placeholder"
-                          sizes="5vw"
-                          />
-                      </div>
                       <div>
                         <p className="text-xs text-xmas-secondary uppercase">{item.writer_name}</p>
                         <p className="text-xs text-xmas-tertiary">{new Date(item.created_at).toLocaleDateString('id-US', {
@@ -170,7 +161,6 @@ const TopCarousell = () => {
                       </div>
                       <div className="bg-xmas-tertiary/25 w-full h-8 rounded-full animate-pulse" />
                     <div className="flex items-center gap-2">
-                      <div className="aspect-square w-8 bg-xmas-tertiary/25 rounded-full flex-shrink-0" />
                       <div className="flex flex-col gap-2 w-1/3">
                         <div className="bg-xmas-tertiary/25 w-full h-3 rounded-full animate-pulse" />
                         <div className="bg-xmas-tertiary/25 w-full h-2 rounded-full animate-pulse" />

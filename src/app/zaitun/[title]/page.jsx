@@ -14,7 +14,7 @@ const Contents = ({articleContent}) => {
       {
         jsonData.blocks.map((block) => {
           if (block.type === 'paragraph') {
-            return <div key={block.id} className="mb-4 text-xmas-dark" dangerouslySetInnerHTML={{__html: block.data.text}}></div>
+            return <div key={block.id} className="mb-4 text-xmas-dark text-base lg:text-lg" dangerouslySetInnerHTML={{__html: block.data.text}}></div>
           }
           if (block.type === 'image') {
             return (
@@ -72,11 +72,11 @@ const ArticlePage = async ({params}) => {
     <div className="min-h-screen">
       <div className="flex">
         <div className="h-screen w-[55%] fixed hidden md:flex">
-          <div className="w-[16%] min-w-[180px] flex-shrink-0 h-full bg-zinc-800 p-2">
+          <div className="w-[16%] min-w-[180px] hidden lg:block flex-shrink-0 h-full bg-zinc-800 p-2">
             <p className="text-center italic text-white/50">Advertisements</p>
-            <AdCarousell ads={AdImage1} sizing="(max-width: 1200px) 0vw, 20vw"/>
-            <AdCarousell ads={AdImage2} sizing="(max-width: 1200px) 0vw, 20vw"/>
-            <AdCarousell ads={AdImage3} sizing="(max-width: 1200px) 0vw, 20vw"/>
+            <AdCarousell ads={AdImage1} sizing="(max-width: 768px) 0vw, 20vw"/>
+            <AdCarousell ads={AdImage2} sizing="(max-width: 768px) 0vw, 20vw"/>
+            <AdCarousell ads={AdImage3} sizing="(max-width: 768px) 0vw, 20vw"/>
           </div>
           <div className="relative w-full h-full bg-xmas-tertiary/25">
             <Image
@@ -84,7 +84,7 @@ const ArticlePage = async ({params}) => {
               fill
               priority
               alt="headline image"
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              sizes="(max-width: 768px) 0vw, (max-width: 1200px) 50vw, 33vw"
               src={content.headline_img} />
           </div>
           <div className="px-2 py-6 h-full border-r border-xmas-tertiary/20 bg-xmas-neutral flex flex-col justify-between">
@@ -122,6 +122,17 @@ const ArticlePage = async ({params}) => {
           </div>
           <div className="w-full md:w-[45%] py-10 px-4 flex-shrink-0">
             <div className="w-full max-w-max md:max-w-prose">
+              <div className="flex lg:hidden gap-2 pr-4">
+                <div className="w-1/3">
+                  <AdCarousell ads={AdImage1} sizing="(max-width: 1024px) 30vw, 0vw"/>
+                </div>
+                <div className="w-1/3">
+                  <AdCarousell ads={AdImage2} sizing="(max-width: 1024px) 30vw, 0vw"/>
+                </div>
+                <div className="w-1/3">
+                  <AdCarousell ads={AdImage3} sizing="(max-width: 1024px) 30vw, 0vw"/>
+                </div>
+              </div>
               <div className="flex gap-2 items-center text-sm mb-8 w-full md:w-2/3 lg:w-1/2">
                 <Link href="/zaitun" className="text-xmas-tertiary">Beranda</Link>
                 <MdChevronRight className="text-neutral-600 flex-shrink-0"/>
@@ -132,7 +143,6 @@ const ArticlePage = async ({params}) => {
                   {/* <h2 className="font-ibara text-xl text-xmas-tertiary font-semibold">{content.category_id}</h2> */}
                   <h1 className="text-5xl lg:text-7xl font-ibara font-semibold text-xmas-primary leading-none hidden md:block">{content.title}</h1>
                   <div className="flex items-center gap-2">
-                    <div className="aspect-square w-8 bg-slate-300 rounded-full" />
                     <div>
                       <p className="text-xs text-xmas-secondary font-semibold font-heading uppercase">{content.writer_name}</p>
                       <p className="text-xs text-xmas-tertiary font-heading">{new Date(content.created_at).toLocaleDateString("id-US", {dateStyle:"long"})}</p>
