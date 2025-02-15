@@ -67,8 +67,8 @@ const Sponsors = () => {
     "/assets/iklan/Iklan_F/10.png",
     "/assets/iklan/Iklan_F/11.png",
     "/assets/iklan/Iklan_F/12.png",
-    "/assets/iklan/Iklan_F/13.png",
-    "/assets/iklan/Iklan_F/14.png",
+    // "/assets/iklan/Iklan_F/13.png",
+    // "/assets/iklan/Iklan_F/14.png",
   ]
 
 
@@ -97,7 +97,7 @@ const Sponsors = () => {
 
       {/* Iklan F */}
       <div className="grid grid-cols-5 gap-3">
-        {iklan_E.map((image, index) => (
+        {iklan_F.map((image, index) => (
           <div key={index} className="relative bg-blue-600/20 w-full aspect-[4/3] rounded-lg flex justify-center items-center cursor-pointer" onClick={() => handlePopup(image)}>
             <Image className="object-cover" fill priority alt="Iklan" src={image} />
           </div>
