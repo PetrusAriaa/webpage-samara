@@ -67,17 +67,15 @@ const Sponsors = () => {
     "/assets/iklan/Iklan_F/10.png",
     "/assets/iklan/Iklan_F/11.png",
     "/assets/iklan/Iklan_F/12.png",
-    // "/assets/iklan/Iklan_F/13.png",
-    // "/assets/iklan/Iklan_F/14.png",
   ]
 
 
   return (
-    <div>
+    <div className="">
       <h2 className="text-center font-heading text-blue-primary mb-2">Terima kasih kepada:</h2>
 
       {/* Iklan D */}
-      <div className="grid grid-cols-3 gap-3 mb-3">
+      <div className="grid grid-cols-3 gap-3 mb-3 max-w-screen-lg mx-auto justify-center">
         {iklan_D.map((image, index) => (
           <div key={index} className="relative bg-blue-600/20 w-full aspect-[4/3] rounded-lg flex justify-center items-center cursor-pointer" onClick={() => handlePopup(image)}>
             <Image className="object-cover" fill priority alt="Iklan" src={image} />
@@ -107,7 +105,7 @@ const Sponsors = () => {
       {isOpen && selectedImage && (
         <div id="popup-overlay" className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 px-6 lg:px-0" onClick={closePopupOnOutsideClick}>
           <div className="relative">
-            <Image className="max-w-full max-h-[90vh] rounded-md" alt="Popup Iklan" src={selectedImage} width={410} height={0} onClick={(e) => e.stopPropagation()} />
+            <Image className="w-full h-auto max-h-[80vh] rounded-md" alt="Popup Iklan" src={selectedImage} width={800} height={600} onClick={(e) => e.stopPropagation()} />
             <button className="absolute top-4 right-4 bg-red-600 text-white px-3 py-1 rounded-full text-sm hover:bg-red-700" onClick={() => setIsOpen(false)}>X</button>
           </div>
         </div>
