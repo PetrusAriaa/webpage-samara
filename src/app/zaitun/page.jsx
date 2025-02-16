@@ -27,6 +27,8 @@ const Sponsors = () => {
     }
   };
 
+  const AD_DIR = "https://storage.googleapis.com/zaitun-dev/ads/"
+
 
 
   const iklan_D=[
@@ -76,30 +78,36 @@ const Sponsors = () => {
 
       {/* Iklan D */}
       <div className="grid grid-cols-3 gap-3 mb-3 max-w-screen-lg mx-auto justify-center">
-        {iklan_D.map((image, index) => (
-          <div key={index} className="relative bg-blue-600/20 w-full aspect-[4/3] rounded-lg flex justify-center items-center cursor-pointer" onClick={() => handlePopup(image)}>
+        {[1,2,3,4,5].map((adNumber) => {
+          const image = `${AD_DIR}D${adNumber}.webp`
+          return (
+          <div key={adNumber} className="relative bg-blue-600/20 w-full aspect-[4/3] rounded-lg flex justify-center items-center cursor-pointer" onClick={() => handlePopup(image)}>
             <Image className="object-cover" fill priority alt="Iklan" src={image} />
           </div>
-        ))}
+        )})}
       </div>
 
       {/* Iklan E */}
       <div className="grid grid-cols-4 gap-3 mb-3">
-        {iklan_E.map((image, index) => (
-          <div key={index} className="relative bg-blue-600/20 w-full aspect-[4/3] rounded-lg flex justify-center items-center cursor-pointer" onClick={() => handlePopup(image)}>
+        {[1,2,3,4,5,6,7,8,9,10,11,12,13,14].map((adNumber) => {
+          const image = `${AD_DIR}E${adNumber}.webp`
+          return (
+          <div key={adNumber} className="relative bg-blue-600/20 w-full aspect-[4/3] rounded-lg flex justify-center items-center cursor-pointer" onClick={() => handlePopup(image)}>
             <Image className="object-cover" fill priority alt="Iklan" src={image} />
           </div>
-        ))}
+        )})}
       </div>
 
 
       {/* Iklan F */}
       <div className="grid grid-cols-5 gap-3">
-        {iklan_F.map((image, index) => (
-          <div key={index} className="relative bg-blue-600/20 w-full aspect-[4/3] rounded-lg flex justify-center items-center cursor-pointer" onClick={() => handlePopup(image)}>
+        {[1,2,3,4,5,6,7,8,9,10,11,12].map((adNumber) => {
+          const image = `${AD_DIR}F${adNumber}.webp`
+          return (
+          <div key={adNumber} className="relative bg-blue-600/20 w-full aspect-[4/3] rounded-lg flex justify-center items-center cursor-pointer" onClick={() => handlePopup(image)}>
             <Image className="object-cover" fill priority alt="Iklan" src={image} />
           </div>
-        ))}
+        )})}
       </div>
 
       {isOpen && selectedImage && (
