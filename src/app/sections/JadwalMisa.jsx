@@ -18,11 +18,11 @@ const JadwalMisaSection = () => {
             </div>
             <div className="text-center">
               <h3 className="font-semibold text-lg ">Hari Selasa, Kamis, dan Sabtu</h3>
-              <ul className="list-disc list-inside list-none mb-3">
+              <ul className="list-inside list-none mb-3">
                 <li>Pukul 06.00 (pagi)</li>
               </ul>
               <h3 className="font-semibold text-lg">Hari Senin, Rabu, dan Jumat</h3>
-              <ul className="list-disc list-inside list-none">
+              <ul className="list-inside list-none">
                 <li>Pukul 19.00</li>
               </ul>
             </div>
@@ -43,11 +43,11 @@ const JadwalMisaSection = () => {
             </div>
             <div className="text-center ">
               <h3 className="font-semibold text-lg">Hari Sabtu</h3>
-              <ul className="list-disc list-inside list-none mb-3">
+              <ul className="list-inside list-none mb-3">
                 <li>Pukul 17.00</li>
               </ul>
               <h3 className="font-semibold text-lg">Hari Minggu</h3>
-              <ul className="list-disc list-inside list-none">
+              <ul className="list-inside list-none">
                 <li>Pukul 06.00</li>
                 <li>Pukul 08.30</li>
                 <li>Pukul 17.00</li>
@@ -84,7 +84,7 @@ const JadwalMisaSection = () => {
             </div>
             <div className="text-center">
               <h3 className="font-semibold text-lg">Setiap Hari Jumat di minggu pertama</h3>
-              <ul className="list-disc list-inside list-none">
+              <ul className="list-inside list-none">
                 <li>Pukul 19.00</li>
               </ul>
             </div>

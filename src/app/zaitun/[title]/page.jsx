@@ -13,6 +13,13 @@ const Contents = ({articleContent}) => {
     <div className="mb-20">
       {
         jsonData.blocks.map((block) => {
+          if (block.type === "quote") {
+            return (
+              <div key={block.id} className="border-b-2 border-xmas-tertiary/25 mb-4 pb-4">
+                <div className="text-xmas-dark/75 text-lg lg:text-xl pl-8 font-serif italic" dangerouslySetInnerHTML={{__html: block.data.text}}></div>
+              </div>
+            ) 
+          }
           if (block.type === 'paragraph') {
             return <div key={block.id} className="mb-4 text-xmas-dark text-base lg:text-lg" dangerouslySetInnerHTML={{__html: block.data.text}}></div>
           }
@@ -30,6 +37,18 @@ const Contents = ({articleContent}) => {
                 <p className="text-sm italic ">{block.data.caption}</p>
               </div>
             )
+          }
+          if (block.type === "list") {
+            return (
+              <ul key={block.id} className={"pl-4 list-outside " + (block.data.style === "unordered" ? " list-disc" : " list-decimal")}>
+                  {
+                    block.data.items.map((listItem, i) => <li key={i} className="text-xmas-dark text-base lg:text-lg">{listItem.content}</li>)
+                  }
+              </ul>
+            )
+          }
+          if (block.type === "header") {
+            return <h3 key={block.id} className="text-xmas-dark text-lg lg:text-xl font-bold">{block.data.text}</h3>
           }
         })
       }
