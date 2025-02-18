@@ -40,8 +40,8 @@ const TopCarousell = () => {
   return (
     <div className="relative">
       <div className="z-10 flex items-center absolute right-0 top-0 gap-2 mt-4 mr-4">
-        <Button onPress={slidePrev} isIconOnly variant="ghost" color="primary" radius="full">{"<"}</Button>
-        <Button onPress={slideNext} isIconOnly variant="ghost" color="primary" radius="full">{">"}</Button>
+        <Button onPress={slidePrev} isIconOnly variant="solid" radius="full" className="bg-xmas-primary text-xmas-neutral">{"<"}</Button>
+        <Button onPress={slideNext} isIconOnly variant="solid" radius="full" className="bg-xmas-primary text-xmas-neutral">{">"}</Button>
       </div>
 
       {
@@ -62,16 +62,18 @@ const TopCarousell = () => {
                 topArticles.map((item, i) => {
                   return (
                     <SwiperSlide key={i}>
-                      <Link href={`/zaitun/${item.slug}`}>
+                      <div className="relative">
                         <div className="relative w-full aspect-square bg-xmas-tertiary/25">
                           <Image
                             src={item.thumb_img}
                             alt=""
                             fill
-                            className="object-cover"
+                            className="object-cover brightness-75"
                             />
-                        </div>
-                      </Link>
+                        </div >
+                        <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-b from-xmas-primary/0 to-xmas-primary/75" />
+                        <Link href={`/zaitun/${item.slug}`} className="absolute bottom-4 left-4 text-3xl md:text-4xl lg:text-6xl text-xmas-neutral font-ibara font-bold hover:underline">{item.title}</Link>
+                      </div>
                     </SwiperSlide>
                   )
                 })
@@ -108,7 +110,7 @@ const TopCarousell = () => {
       {
         topArticles.length > 0 ?
         (
-          <div className="grid grid-cols-3 gap-4 mt-4">
+          <div className="hidden md:grid grid-cols-3 gap-4 mt-4">
             {
               topArticles.map((item, i) => {
                 return (
@@ -147,7 +149,7 @@ const TopCarousell = () => {
         )
         :
         (
-          <div className="grid grid-cols-3 gap-4 mt-4">
+          <div className="hidden md:grid grid-cols-3 gap-4 mt-4">
             {
               [0,1,2].map((i) => {
                 return (
