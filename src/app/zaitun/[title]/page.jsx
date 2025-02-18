@@ -26,14 +26,13 @@ const Contents = ({articleContent}) => {
           if (block.type === 'image') {
             return (
               <div key={block.id} className="my-8">
-                <div className="relative w-full aspect-[16/9] rounded-xl my-2 overflow-hidden">
-                  <Image
-                    src={block.data.file.url}
-                    alt={block.data.caption}
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                    fill
-                    className="object-cover" />
-                </div>
+                <Image
+                  src={block.data.file.url}
+                  alt={block.data.caption}
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  height={0}
+                  width={1080}
+                  className="w-full rounded-xl" />
                 <p className="text-sm italic ">{block.data.caption}</p>
               </div>
             )
