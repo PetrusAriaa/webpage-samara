@@ -62,7 +62,7 @@ const Sponsors = () => {
         {[1,2,3,4,5,6,7,8,9,10,11,12].map((adNumber) => {
           const image = `${AD_DIR}F${adNumber}.webp`
           return (
-          <div key={adNumber} className="relative bg-blue-600/20 w-full aspect-[4/3] rounded-lg flex justify-center items-center cursor-pointer" onClick={() => handlePopup(image)}>
+          <div key={adNumber} className="relative bg-blue-600/20 w-full aspect-square rounded-lg flex justify-center items-center cursor-pointer" onClick={() => handlePopup(image)}>
             <Image className="object-cover" fill priority alt="Iklan" src={image} />
           </div>
         )})}
