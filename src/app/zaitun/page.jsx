@@ -123,7 +123,7 @@ const ZaitunPage = () => {
           </div>
 
           <div className="relative w-full h-full hidden md:block bg-xmas-tertiary/25">
-            <Image className="object-cover" fill priority alt="" src="/assets/zaitun-preview.webp" />
+            <Image className="object-cover" fill priority alt="" src="/assets/zaitun-cover.jpg" />
           </div>
 
           <div className="hidden md:flex px-2 py-6 h-full border-r border-xmas-tertiary/20 bg-xmas-neutral flex-col justify-between">
