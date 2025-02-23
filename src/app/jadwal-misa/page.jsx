@@ -76,7 +76,7 @@ const JadwalMisa = () => {
               <h3 className="font-semibold text-lg">Hari Minggu</h3>
               <ul className="list-disc list-inside list-none">
                 <li>Pukul 06.00</li>
-                <li>Pukul 18.30</li>
+                <li>Pukul 08.30</li>
                 <li>Pukul 17.00</li>
               </ul>
             </div>
