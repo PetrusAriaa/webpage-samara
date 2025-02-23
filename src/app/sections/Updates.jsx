@@ -11,7 +11,7 @@ import 'swiper/css'
 const DUMMY_NEWS = [
   {
     title: "Zaitun Edisi Natal 2024",
-    description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam vitae qui natus adipisci, temporibus quam molestias fugit, dolorum tempora cumque enim id possimus in facilis saepe molestiae error rerum eum.",
+    description: "Majalah digital Zaitun Edisi Natal 2024 telah terbit!\n Klik \"Zaitun\" untuk baca selengkapnya.",
     img: "/assets/zaitun-preview.webp"
   },
   {

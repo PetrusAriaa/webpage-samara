@@ -1,6 +1,7 @@
 import TopCarousell from "./TopCarousell"
 import CategorySection from "./CategorySection"
 import AdCarousell from "./AdCarousell"
+import UcapanSelamatCarousell from "./UcapanSelamatCarousell"
 
 const AdImage1 = [
   "https://storage.googleapis.com/zaitun-dev/ads/AB1.webp",
@@ -30,6 +31,7 @@ const ContentSection = ({openModal}) => {
         </div>
       </div>
       <CategorySection categoryId={5} categoryTitle="Sambutan"/>
+      <UcapanSelamatCarousell />
       <CategorySection categoryId={2} categoryTitle="Liputan Utama"/>
       <div className="flex gap-4 pr-4 lg:hidden mt-12">
         <div className="w-1/2">

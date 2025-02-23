@@ -9,6 +9,7 @@ import { HiHome } from "react-icons/hi";
 import { FaCompass } from "react-icons/fa6";
 import { FiLogOut } from "react-icons/fi";
 import AdCarousell from "./AdCarousell";
+import { PopUpAdModal } from "@/components/PopUpAdModal";
 
 const Sponsors = () => {
 
@@ -28,49 +29,6 @@ const Sponsors = () => {
   };
 
   const AD_DIR = "https://storage.googleapis.com/zaitun-dev/ads/"
-
-
-
-  const iklan_D=[
-    "/assets/iklan/Iklan_D/1.png",
-    "/assets/iklan/Iklan_D/3.png",
-    "/assets/iklan/Iklan_D/2.png",
-    "/assets/iklan/Iklan_D/4.png",
-    "/assets/iklan/Iklan_D/5.png",
-  ]
-
-  const iklan_E=[
-    "/assets/iklan/Iklan_E/1.png",
-    "/assets/iklan/Iklan_E/2.png",
-    "/assets/iklan/Iklan_E/3.png",
-    "/assets/iklan/Iklan_E/4.png",
-    "/assets/iklan/Iklan_E/5.png",
-    "/assets/iklan/Iklan_E/6.png",
-    "/assets/iklan/Iklan_E/7.png",
-    "/assets/iklan/Iklan_E/8.png",
-    "/assets/iklan/Iklan_E/9.png",
-    "/assets/iklan/Iklan_E/10.png",
-    "/assets/iklan/Iklan_E/11.png",
-    "/assets/iklan/Iklan_E/12.png",
-    "/assets/iklan/Iklan_E/13.png",
-    "/assets/iklan/Iklan_E/14.png",
-  ]
-
-  const iklan_F=[
-    "/assets/iklan/Iklan_F/1.png",
-    "/assets/iklan/Iklan_F/2.png",
-    "/assets/iklan/Iklan_F/3.png",
-    "/assets/iklan/Iklan_F/4.png",
-    "/assets/iklan/Iklan_F/5.png",
-    "/assets/iklan/Iklan_F/6.png",
-    "/assets/iklan/Iklan_F/7.png",
-    "/assets/iklan/Iklan_F/8.png",
-    "/assets/iklan/Iklan_F/9.png",
-    "/assets/iklan/Iklan_F/10.png",
-    "/assets/iklan/Iklan_F/11.png",
-    "/assets/iklan/Iklan_F/12.png",
-  ]
-
 
   return (
     <div className="">
@@ -104,7 +62,7 @@ const Sponsors = () => {
         {[1,2,3,4,5,6,7,8,9,10,11,12].map((adNumber) => {
           const image = `${AD_DIR}F${adNumber}.webp`
           return (
-          <div key={adNumber} className="relative bg-blue-600/20 w-full aspect-[4/3] rounded-lg flex justify-center items-center cursor-pointer" onClick={() => handlePopup(image)}>
+          <div key={adNumber} className="relative bg-blue-600/20 w-full aspect-square rounded-lg flex justify-center items-center cursor-pointer" onClick={() => handlePopup(image)}>
             <Image className="object-cover" fill priority alt="Iklan" src={image} />
           </div>
         )})}
@@ -197,7 +155,7 @@ const ZaitunPage = () => {
               </div>
             </div>
             <div className="absolute flex items-end p-4 h-full">
-              <h1 className="text-8xl font-ibara font-bold leading-tight text-xmas-neutral">
+              <h1 className="text-6xl lg:text-8xl font-ibara font-bold leading-tight text-xmas-neutral">
                 Zaitun Edisi Natal 2024
               </h1>
             </div>
@@ -221,6 +179,7 @@ const ZaitunPage = () => {
                   <AdCarousell ads={AdImage3} onSwiperClicked={handlePopup}/>
                 </div>
               </div>
+              {/* <PopUpAdModal img={"https://storage.googleapis.com/zaitun-dev/ads/C1.webp"} /> */}
               <Sponsors />
             </div>
           </div>
@@ -228,7 +187,7 @@ const ZaitunPage = () => {
       </div>
 
       {isOpen && (
-        <div id="popup-overlay" className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 px-6 lg:px-0" onClick={closePopupOnOutsideClick}>
+      <div id="popup-overlay" className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 px-6 lg:px-0" onClick={closePopupOnOutsideClick}>
         <div className="relative">
           <Image className="max-w-full max-h-[90vh] rounded-md" alt="Popup Iklan" src={selectedImage} width={410} height={0} onClick={(e) => e.stopPropagation()} />
           <button className="absolute top-4 right-4 bg-red-600 text-white px-3 py-1 rounded-full text-sm hover:bg-red-700" onClick={() => setIsOpen(false)}>X</button>
