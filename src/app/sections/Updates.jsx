@@ -12,7 +12,7 @@ const DUMMY_NEWS = [
   {
     title: "Zaitun Edisi Natal 2024",
     description: "Majalah digital Zaitun Edisi Natal 2024 telah terbit!\n Klik \"Zaitun\" untuk baca selengkapnya.",
-    img: "/assets/zaitun-preview.webp"
+    img: "/assets/zaitun-cover.jpg"
   },
   {
     title: "Audisi PSDC SAMARA",
