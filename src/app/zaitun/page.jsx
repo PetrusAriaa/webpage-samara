@@ -151,7 +151,7 @@ const ZaitunPage = () => {
           <div className="relative w-full min-h-screen md:min-h-min block md:hidden">
             <div className="absolute size-full">
               <div className="relative w-full h-screen">
-                <Image src="/assets/zaitun-preview.webp" fill priority className="object-cover brightness-50" alt="cover" />
+                <Image src="/assets/zaitun-cover.jpg" fill priority className="object-cover brightness-50" alt="cover" />
               </div>
             </div>
             <div className="absolute flex items-end p-4 h-full">
